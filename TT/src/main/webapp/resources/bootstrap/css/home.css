@@ -1,0 +1,1859 @@
+@charset "utf-8";
+
+/* font*/
+@font-face  {
+    font-family:"NanumBarunGothic";
+    font-style: normal;
+    src: url('//img.tourtips.com/fonts/NanumBarunGothic.eot');
+    src: url('//img.tourtips.com/fonts/NanumBarunGothic.eot?#iefix') format('embedded-opentype'),
+           url('//img.tourtips.com/fonts/NanumBarunGothic.woff') format('woff')
+}
+
+@font-face  {
+    font-family:"NanumBarunGothicBold";
+    font-style: normal;
+    src: url('//img.tourtips.com/fonts/NanumBarunGothicBold.eot');
+    src: url('//img.tourtips.com/fonts/NanumBarunGothicBold.eot?#iefix') format('embedded-opentype'),
+           url('//img.tourtips.com/fonts/NanumBarunGothicBold.woff') format('woff')
+}
+
+/* default set */
+html{height:100%;margin:0;padding:0;background:#FFF;}
+body{min-width:1090px;height:100%; font-family:"NanumBarunGothic", "Arial", "돋움";color:#232323;margin:0;padding:0;overflow-y:scroll;}
+
+/* 레이어 팝업 예외처리 */
+#skyscanner-white-label,
+/*html.fixed{overflow:hidden;}*/
+html.fixed #header{z-index:1;position:relative;}
+html.fixed #gnb,
+html.fixed .pageDesc.fixed{position:relative;z-index:1;}
+html.fixed .goTop{display:none;}
+html.fixed #footer{z-index:0;}
+
+/* default set */
+body, table, input, textarea, button{font-family:"NanumBarunGothic";letter-spacing:0;}
+body,div,ul,ul li,p,ol,ol li , li , dl, dl dt, dl dd, h1, h2, h3, h4, h5, h6 ,form, fieldset,button{margin: 0;padding: 0;font-family:"NanumBarunGothic", "Arial", "돋움";font-weight:normal;}
+html, body{font-size:14px;line-height:1em;text-align: left;font-family:"NanumBarunGothic", "Arial", "돋움";}
+ul, ul li, ol, ol li{list-style-type: none}
+caption,legend,hr{display:none;}
+button{border: 0 none;background: none;cursor: pointer;font-family:"NanumBarunGothic", "Arial", "돋움";outline:none;}
+body, table, input, textarea, button{font-family:"NanumBarunGothic", "Arial", "돋움";}
+input{font-family:"NanumBarunGothic", "Arial", "돋움";font-size:14px;margin:0;padding:0;outline:0;border:1px solid #d6d6d6;outline:none;}
+input:focus{font-family:"NanumBarunGothic", "Arial", "돋움";font-size:14px;margin:0;padding:0;outline:0;border:1px solid #f37720;outline:none;}
+a,
+a:link{text-decoration: none;color: #232323;cursor: pointer;}
+a:hover{text-decoration: none}
+img, fieldset{border: 0;}
+a img{border: 0 none;}
+em{font-style:normal;}
+table{table-layout:fixed;}
+table, th, td{margin:0;padding:0;border-collapse:collapse;}
+/* forms */
+form,fieldset               { margin:0; padding:0; border:0}
+legend                      { display:none}
+input,textarea              { font-weight:normal; -webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px; }
+input[type="file"]          { font-size:12px; font-weight:normal; line-height:12px}
+textarea                    { height:auto}
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="file"],
+input[type="tel"]{
+    vertical-align:middle;
+    background-color:#fff;
+    border:1px solid #d5d5d5;outline:none;
+   }
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type="password"],
+    input[type="password"]:focus{height:auto; padding:0px 5px;outline:none;}
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="tel"]:focus{
+    border-color:#F37720;
+    outline:none;}
+input[type="radio"],
+input[type="checkbox"]{
+    margin:0 5px 0 0;
+    margin-top:1px \9;
+    *margin-top:0;
+    line-height:normal;
+    vertical-align:middle;
+    cursor:pointer;outline:none;}
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"]{ width:auto;outline:none;}
+.hide{font:0/0 arial;text-indent:-9999em;}
+
+#u_skip{position:absolute;top:-9999px;height:0;width:0;}
+#wrap{z-index:2;position:relative;min-width:1090px;}
+.ifr_frame{font:0/0 arial;}
+
+/* 재정의 */
+#container{position:relative;width:100%;min-height:900px !important;}
+.policy_content.nlogin_policy{height:205px;}
+.policy_content.nlogin_policy ol{margin-left:35px;}
+
+/* 구스타일 */
+.body{z-index:50;position:relative;margin:0 auto;width:1091px;padding:42px 20px 100px 20px;}
+.back_gray{background:#f5f5f5;}
+.back_gray4{background:#efefef;}
+.section_area{position:relative;width:100%;clear:both;}
+
+/* ic */
+.ic{z-index:3;position:absolute;bottom:0;right:0;display:block;width:47px;height:48px;text-indent:-9999px;font:0/0 arial;background:url('//img.tourtips.com/images/cm/spr_mark_pc.png') no-repeat;}
+.ic.new{width:48px;}
+.ic.update{background-position:-95px 0;}
+.ic.hot{background-position:-48px 0;}
+.icM{z-index:3;position:absolute;bottom:0;right:0;display:block;width:70px;height:70px;text-indent:-9999px;font:0/0 arial;background:url('//img.tourtips.com/images/cm/spr_mark_pc.png') no-repeat;}
+.icM.new{background-position:0 -48px;}
+.icM.update{background-position:-140px -48px;}
+.icM.hot{background-position:-70px -48px;}
+.icL{z-index:3;position:absolute;bottom:48px;left:156px;display:block;width:99px;height:99px;text-indent:-9999px;font:0/0 arial;background:url('//img.tourtips.com/images/cm/spr_mark_pc.png') no-repeat;}
+.icL.new{background-position:0 -118px;}
+.icL.update{left:157px;background-position:-197px -118px;}
+.icL.hot{left:159px;width:98px;background-position:-99px -118px;}
+
+/* header */
+#header{z-index:9999;position:relative;height:188px;}
+#header .headTop{position:relative;width:1090px;height:130px;margin:0 auto;}
+#header .headTop .logo{position:absolute;top:0;left:50%;display:block;width:304px;height:100%;margin-left:-152px;}
+#header .headTop .logo a{display:block;width:100%;height:100%;font-size:normal 0/0 arial;text-align:center;}
+#header .headTop .logo a:hover{color:#232323;}
+#header .headTop .logo a img{display:block;margin:0 auto;}
+#header #search{position:absolute;top:48px;left:0;box-shadow:none;background:none;border:none;}
+#header #search .round{position:relative;display:block;width:218px;height:32px;border:1px solid #c1c1c1;border-radius:25px;}
+#header #search .round input{position:absolute;top:3px;left:13px;width:167px;height:26px;border:none;box-shadow:none;padding:0;margin:0;}
+#header #search .round button{position:absolute;top:3px;left:185px;display:block;width:27px;height:27px;text-indent:-9999px;font:0/0 arial;background:url('//img.tourtips.com/images/cm/spr_ico_common.png') 5px 5px no-repeat;}
+#header .loginArea{position:absolute;top:59px;right:0;width:120px;vertical-align:middle;white-space:nowrap;}
+#header .loginArea a,
+#header .loginArea span{float:left;display:inline-block;height:14px;color:#232323;line-height:14px;letter-spacing:0;font-size:14px;vertical-align:middle;}
+#header .loginArea span{color:#e5e5e5;padding:0 11px;}
+#header .myInfo{position:absolute;top:48px;right:0;}
+#header .myInfo p{font-size:14px;color:#232323;text-align:right;margin:2px 10px 4px 47px;}
+#header .myInfo ul{margin:0 0 0 47px;}
+#header .myInfo li{position:relative;float:left;display:inline-block;padding:0 9px;background:url('//img.tourtips.com/images/cm/bg_myInfo.gif') left center no-repeat;}
+#header .myInfo li:first-child{padding-left:0;background:none;}
+#header .myInfo li a{display:inline-block;color:#777;font-size:12px;}
+#header .myInfo li a:hover{text-decoration:underline;}
+#header .myInfo .profilePhoto{position:absolute;top:0;left:0;width:34px;height:34px;overflow:hidden;background-color:#e4e4e4;}
+#header .myInfo .profilePhoto .cover{z-index:2;position:absolute;top:0;left:0;display:block;width:34px;height:34px;background:url('//img.tourtips.com/images/cm/bg_profilePhoto.png');}
+#header .myInfo .profilePhoto img{z-index:1;position:absolute;top:0;left:0;width:34px;}
+#header .myInfo .selectMypage{display:none;z-index:100;position:absolute;top:23px;left:0;width:154px;background:#FFF;border:1px solid #898989;}
+#header .myInfo .selectMypage ul{display:block;margin:0;}
+#header .myInfo .selectMypage ul li{float:none;display:block;width:100%;height:24px;padding:0;margin:0;clear:both;}
+#header .myInfo .selectMypage ul li a{display:block;width:100%;height:100%;line-height:24px;text-indent:11px;font-size:12px;color:#232323;}
+#header .myInfo .selectMypage ul li a:hover{background:#eee;text-decoration:none;}
+
+/* gnb */
+#gnb{position:relative;min-width:1090px;height:58px;text-align:center;background:url('//img.tourtips.com/images/cm/bg_gnb.gif') repeat-x;overflow:hidden;}
+#gnb.on{height:429px;}
+#gnb .gnbIn{z-index:2;position:absolute;top:0;left:50%;width:1090px;margin:0 0 0 -545px;}
+#gnb ul{display:block;}
+#gnb ul:after{content:'';display:block;clear:both;}
+#gnb ul li{position:relative;float:left;display:inline-block;width:154px;height:58px;}
+#gnb ul li:first-child{width:154px;}
+#gnb ul li.dest,
+#gnb ul li.community{width:155px;}
+#gnb ul li a.deapth1{position:relative;display:inline-block;width:100%;height:100%;font-size:18px;font-weight:normal;font-family:"NanumBarunGothicBold";line-height:58px;color:#FFF;padding:0;margin:0;}
+#gnb ul li a.deapth1.on,
+#gnb ul li a.deapth1.selected,
+#gnb ul li a.deapth1:hover{background:#d4681c;transition:all 0.3s;-webkit-transition:all 0.3s;-moz-transition:all 0.3s;}
+#gnb ul li a.deapth1 .new{position:relative;top:-7px;display:inline-block;width:13px;height:13px;font:0/0 arial;letter-spacing:0;margin:0 0 0 5px;overflow:hidden;background:url('//img.tourtips.com/images/pc/main/ico_mark_new.png') no-repeat;}
+#gnb ul li .deapth2{z-index:1;position:relative;display:block;width:153px;height:372px;line-height:38px;text-align:left;border-right:1px solid #ebebeb;transition:none !important;/* 호텔스 컴바인 오류 */}
+#gnb ul li.dest .deapth2,
+#gnb ul li.community .deapth2{width:154px;}
+#gnb ul li.dest .deapth2{border-left:1px solid #ebebeb;}
+#gnb ul li .deapth2 ul{padding:21px 0 0 0;}
+#gnb ul li .deapth2 li{clear:both;float:none;display:block;height:auto;line-height:38px;text-align:left;white-space:nowrap;text-indent:20px;}
+#gnb ul li .deapth2 li:first-child{width:auto;}
+#gnb ul li .deapth2 li a{display:block;color:#555;font-size:14px;letter-spacing:0;}
+#gnb ul li .deapth2 li a .new{position:relative;top:2px;display:inline-block;width:13px;height:13px;font:0/0 arial;letter-spacing:0;margin:0 0 0 5px;overflow:hidden;background:url('//img.tourtips.com/images/cm/ico/spr_community.png') -41px 0 no-repeat;}
+#gnb ul li .deapth2 li a.on,
+#gnb ul li .deapth2 li a:hover{color:#f37720;}
+#gnb ul:hover li a.deapth1.selected{background:none;transition:all 0.3s;-webkit-transition:all 0.3s;-moz-transition:all 0.3s;}
+#gnb ul:hover li a.deapth1:hover{background:#d4681c;transition:all 0.3s;-webkit-transition:all 0.3s;-moz-transition:all 0.3s;}
+#gnb .bg{z-index:1;position:absolute;top:58px;left:0;display:block;width:100%;height:371px;background:#FFF;}
+#gnb .bg:after{z-index:2;content:'';position:absolute;bottom:0;left:0;width:100%;height:1px;background:#ebebeb;}
+#gnb .bannerZone{position:absolute;top:6px;left:50%;width:174px;height:46px;margin-left:545px;background:transparent;}
+#gnb.fixed{z-index:100;position:fixed;top:0;left:0;width:100%;}
+
+/* container */
+#container{z-index:10;position:relative;width:1091px;margin:-44px auto 0 auto;}
+.more{position:absolute;top:3px;right:0;text-align:right;color:#898989;font-size:12px;font-family:"NanumBarunGothic";}
+
+/* subWrap */
+#subWrap{position:relative;width:1090px;height:100%;margin:0 auto;*zoom:1;}
+#subWrap:after{content:'';display:block;clear:both;}
+#subWrap.wide{width:100%;}
+#subWrap.wide #contentWrap{width:1090px;margin:0 auto;}
+
+/* contentWrap */
+#contentWrap{margin:40px 0;}
+
+/* lnb */
+.lnb{float:left;display:inline-block;width:200px;padding-top:30px;}
+.lnb ul{display:block;margin:0 0 20px;*zoom:1;}
+.lnb ul:after{content:'';display:block;clear:both;}
+.lnb li{display:block;width:182px;min-height:36px;}
+.lnb li a{position:relative;display:block;width:182px;height:36px;font-size:16px;color:#555;line-height:36px;vertical-align:middle;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.lnb li a span{position:absolute;bottom:7px;left:0;width:0;height:1px;background:#ff4f02;transition:all 0.3s;}
+.lnb li a:hover,
+.lnb li.on a{color:#ff4f02;}
+.lnb a:hover span,
+.lnb li.on a span{width:100%;}
+.lnb li a .new{display:inline-block;width:13px;height:13px;font:normal 0/0 arial;vertical-align:middle;margin-left:5px;background:url('//img.tourtips.com/images/cm/ico/ico_new.png') no-repeat;}
+.lnb .adv{margin:0 0 20px;}
+.lnb .adv a{display:block;width:100%;height:90px;font:normal 0/0 arial;}
+.lnb .adv img{display:block;width:200px;height:auto;}
+.lnb.fixed{z-index:90;position:fixed;top:108px;}
+.lnb.fixed.bottom{position:absolute;bottom:0;left:0;top:inherit;}
+.lnb.absolute,
+.lnb.fixed.absolute{position:absolute;top:inherit;bottom:20px;height:auto;}
+.lnb .lnbTitle{display:block;height:26px;font:normal 26px/26px "NanumBarunGothicBold";color:#232323;margin:12px 0 18px 0;}
+.lnb .myNotice{padding-top:10px;margin-top:7px;border-top:1px solid #ececec;}
+.lnb .myScrap{padding-bottom:9px;margin-bottom:11px;border-bottom:1px solid #ececec;}
+.lnb .line2{height:51px;}
+.lnb .line2 a{width:167px;height:auto;text-indent:0;line-height:20px;padding-left:16px;margin-top:10px;}
+.lnb .line2 a.on{background-position:100% 4px;}
+.lnb .withdraw{padding-top:10px;margin-top:7px;border-top:1px solid #ececec;}
+.lnb .withdraw a{color:#777;}
+.lnb h1.bigTitle{height:auto;letter-spacing:-1px;margin:0 0 27px;}
+.lnb h1.bigTitle a{position:relative;position:relative;display:block;width:182px;color:#232323;height:auto;line-height:120%;margin:-2px 0 0 0;font-size:26px;text-indent:0;overflow:inherit;white-space:normal;}
+.lnb li .depth3{display:none;margin:0 0 10px;border-bottom:1px solid #e3e3e3;}
+.lnb li .depth3 ul{display:block;padding-left:15px;margin:0 0 16px;}
+.lnb li .depth3 ul:after{content:'';display:block;clear:both;}
+.lnb li .depth3 ul li{display:block;height:40px;}
+.lnb li .depth3 ul li a{display:block;height:100%;width:100%;line-height:40px;color:#777;font-size:14px;padding-left:13px;background:url('//img.tourtips.com/images/pc/cm/bu_lnb_grey.gif') 0 center no-repeat;}
+.lnb li .depth3 ul li a:hover{color:#ff4f02;}
+.lnb li .depth3 ul li a.on{color:#ff4f02;background:url('//img.tourtips.com/images/pc/cm/bu_lnb_orange.gif') 0 center no-repeat;}
+.lnb li.on .depth3{display:block;}
+.lnb .btn_memberOut{display:inline-block;width:auto;height:30px;line-height:28px;color:#777;font-size:14px;padding:0 13px;margin:0 0 20px;box-sizing:border-box;border-radius:30px;border:1px solid #ddd;}
+.body .lnb{padding-top:0;}
+
+/* contents */
+#subWrap .contents{float:right;width:804px;min-height:800px;color:#777;padding:40px 0 40px 66px;border-left:1px solid #e3e3e3;}
+
+/* visualWrap */
+#visualWrap{position:relative;width:100%;height:506px;background:url('//img.tourtips.com/images/pc/main/img_visual.jpg') center center no-repeat;overflow:hidden;}
+#visualWrap .shadow{z-index:1;position:absolute;top:0;left:0;display:block;width:100%;height:100%;background:#000;opacity:0.3;filter:alpha(opacity=30);}
+#visualWrap .videoWrap{z-index:0;position:absolute;top:0;left:0;width:100%;height:506px;max-height:506px;min-height:506px;border-bottom:1px solid #999;overflow:hidden;display/*\**/:none\9;*display:none;}
+#visualWrap .videoWrap video{z-index:1;min-width:100%;min-height:506px;}
+#visualWrap.subVisual{height:506px;margin-top:-50px;}
+
+/* 기존 css와 중복 막기 위해 이중클래스 사용 */
+.btn.white.small{width:91px;height:27px;font-size:12px;line-height:26px;letter-spacing:0;text-align:center;padding:0;border-color:#c1c1c1;}
+.btn.white{display:inline-block;height:33px;color:#232323;font:normal 15px/33px "NanumBarunGothic";;padding:0 25px;margin:0;background:#FFF;border:1px solid #c5c5c5;}
+.btn.orange{display:inline-block;height:32px;color:#FFF;font:normal 15px/30px "NanumBarunGothic";;padding:0 45px;margin:0;background:#f37720;border:1px solid #e0772c;}
+.btn.black{display:inline-block;height:32px;color:#FFF;font:normal 15px/30px "NanumBarunGothic";;padding:0 45px;margin:0;background:#2f2f2f;border:1px solid #1a1a1a;}
+.btn.black.small{width:136px;height:27px;line-height:27px;font-size:12px;text-align:center;padding:0;}
+
+/* title */
+#wrap h1.bigTitle{display:block;min-height:26px;line-height:120%;color:#232323;font-size:26px;;vertical-align:middle;margin:0 0 15px;}
+#wrap h1.bigTitle img{position:relative;top:-1px;width:34px;vertical-align:middle;margin-right:10px;}
+#wrap h2{display:block;color:#232323;font-family:"NanumBarunGothicBold";font-weight:normal;font-size:19px;;margin:0 0 13px;}
+#wrap h2 em{color:#ff4f02;}
+#wrap .titleSt02{position:relative;display:block;height:22px;line-height:22px;font-size:22px;color:#232323;;font-family:"NanumBarunGothicBold";font-weight:normal;margin:0 0 18px;}
+#wrap .titleSt02 span{font-size:13px;letter-spacing:-0.025em;font-family:"NanumBarunGothicBold";font-weight:normal;margin-left:20px;}
+#wrap .titleSt03{position:relative;display:block;color:#232323;font-family:"NanumBarunGothicBold";font-weight:normal;font-size:19px;margin:0 0 20px;}
+#wrap .titleSt03 em{color:#ff4f02;}
+#wrap .titleSt03 i{font-style:normal;}
+
+/* anythingSlide */
+#slider{height:390px;list-style:none;overflow-x:hidden;overflow-y:auto;width:700px;}
+.anythingSlider-default{margin:0 auto;}
+.anythingSlider-default .anythingControls{text-align:center;}
+.anythingSlider-default .anythingControls ul{width:auto;height:9px;text-align:center;}
+.anythingSlider-default .anythingControls a{z-index:9;position:relative;display:inline-block;width:9px;height:9px;padding:0;border-radius:5px;background:#e1e1e1;}
+.anythingSlider-default .anythingControls a span{display:none;}
+.anythingSlider-default .anythingControls a.cur{background-color:#7d7d7d;}
+.anythingSlider-default .anythingControls a.start-stop{background-color:#040;color:#ddd;}
+.anythingSlider-default .anythingControls a.start-stop.playing{background-color:#800;}
+.anythingSlider-default .anythingControls a.start-stop:hover,
+.anythingSlider-default .anythingControls a.start-stop.hover,
+.anythingSlider-default .anythingControls a.start-stop .anythingControls ul a:hover{background-image:none;color:#ddd;}
+.anythingSlider-default.activeSlider .anythingControls a.start-stop{background-color:#080;color:#fff;}
+.anythingSlider-default.activeSlider .anythingControls a.start-stop.playing{background-color:#d00;color:#fff;}
+.anythingSlider-default.activeSlider .start-stop:hover,
+.anythingSlider-default.activeSlider .start-stop.hover{color:#fff;}
+.anythingSlider-default .arrow{display:inline-block;vertical-align:middle;/*position:absolute;bottom:-34px;*/}
+.anythingSlider-default .arrow a{background:url('//img.tourtips.com/images/cm/spr_ico_common.png') no-repeat;display:block;height:15px;margin:0;outline:0;text-align:center;width:10px;}
+.anythingSlider-default .arrow a:hover{background-color:none;}
+.anythingSlider-default .back{left:455px;margin-right:15px;}
+.anythingSlider-default .back a{background-position:left -30px;}
+.anythingSlider-default .back a:hover,
+.anythingSlider-default .back a.hover{background-position:left -30px;}
+.anythingSlider-default .forward{right:455px;margin-left:15px;}
+.anythingSlider-default .forward a{background-position:-30px -30px;}
+.anythingSlider-default .forward a:hover,
+.anythingSlider-default .forward a.hover{background-position:-30px -30px;background-color:transparent;}
+.anythingSlider-default .anythingControls{display:none;height:15px;outline:0;vertical-align:middle;margin-top:20px;}
+.anythingSlider-default .anythingControls ul{display:inline-block;vertical-align:middle;margin:-3px 0 0 0;padding:0;}
+.anythingSlider-default .anythingControls ul li{display:inline;}
+.anythingSlider-default .anythingControls ul a{display:inline-block;margin:0 0 0 10px;outline:0;text-align:center;text-decoration:none;}
+.anythingSlider-default .anythingControls ul li:first-child a{margin-left:0;}
+.anythingSlider-default .anythingControls .anythingNavWindow{float:left;overflow:hidden;}
+.anythingSlider-default .anythingControls .start-stop{float:right;outline:0;padding:2px 5px;text-align:center;text-decoration:none;width:40px;z-index:100;}
+.as-oldie .anythingSlider-default .arrow{top:30%;}
+.as-oldie .anythingSlider-default .arrow a{margin:0;}
+.as-oldie .anythingSlider-default .anythingControls li{margin-left:3px;}
+.as-oldie .anythingSlider-default .anythingControls a{margin:0;}
+.as-oldie .anythingSlider-default .anythingNavWindow{margin:0 2px;}
+.as-oldie .anythingSlider-default .anythingNavWindow li{padding:3px 0 0 0;}
+#contentWrap .anythingSlider-default .anythingControls ul a{margin:0 5px;}
+.anythingSlider{display:block;overflow:visible !important;position:relative;}
+.anythingSlider .anythingWindow{height:100%;overflow:hidden;position:relative;width:100%;}
+.anythingSlider .anythingBase{background:transparent;left:0;list-style:none;margin:0;overflow:visible !important;padding:0;position:absolute;top:0;}
+.anythingSlider .arrow span{display:block;visibility:hidden;}
+.anythingSlider .arrow.disabled{display:none;}
+.anythingSlider .panel{background:transparent;display:block;float:left;margin:0;overflow:hidden;padding:0;}
+.anythingSlider .vertical .panel{float:none;}
+.anythingSlider .fade .panel{float:none;left:0;position:absolute;top:0;z-index:0;}
+.anythingSlider .fade .activePage{z-index:1;}
+.anythingSlider.rtl .anythingWindow{direction:ltr;unicode-bidi:bidi-override;}
+.anythingSlider.rtl .anythingControls ul{float:left;}
+.anythingSlider.rtl .anythingControls ul a{float:right;}
+.anythingSlider,
+.anythingSlider .anythingWindow,
+.anythingSlider .anythingControls ul a,
+.anythingSlider .arrow a,
+.anythingSlider .start-stop{moz-transition-duration:0s;o-transition-duration:0s;transition-duration:0s;webkit-transition-duration:0s;}
+
+/* listArea */
+.listArea{position:relative;margin:0 0 40px;padding-left:22px;overflow:hidden;}
+.listArea ul{display:block;width:880px;padding:0 0 1px;margin:-20px 0 0 -22px;*zoom:1;}
+.listArea ul:after{content:'';display:block;clear:both;}
+.listArea li{float:left;display:inline-block;width:253px;margin:20px 22px 0 0;}
+.listArea li:first-child{margin-left:0;}
+.listArea li a{position:relative;display:block;padding:208px 15px 0 15px;}
+.listArea li a:hover .border{opacity:0.2;filter:alpha(opacity=20)}
+.listArea li a ul{margin:0;}
+.listArea li a li{width:auto;padding:0;margin:0;}
+.listArea li .ad{width:100%;height:324px;padding:0;background:#f7f7f7;}
+.listArea .thumb{z-index:1;position:absolute;top:0;left:0;display:block;width:253px;height:192px;overflow:hidden;}
+.listArea .thumb img{width:253px;min-height:192px;}
+.listArea .editor{z-index:2;position:absolute;top:0;left:0;width:253px;height:193px;overflow:hidden;}
+.listArea .editor p{z-index:1;position:absolute;top:142px;left:61px;display:block;width:165px;font-size:13px;line-height:140%;color:#FFF;}
+.listArea .editor img{z-index:1;position:absolute;top:142px;left:15px;width:34px;height:34px;border-radius:16px;}
+.listArea .editor .cover{z-index:0;position:absolute;top:-1px;left:-1px;display:block;width:100%;height:100%;background:url('//img.tourtips.com/images/cm/cover_listArea_editor.png') 0 bottom repeat-x;}
+.listArea .title{display:block;height:14px;font-size:18px;font-weight:normal;line-height:18px;;padding:3px 0;margin:0 0 9px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.listArea .desc{display:block;height:42px;color:#777;line-height:20px;margin:0 0 14px;overflow:hidden;}
+.listArea .tag{display:block;font-size:13px;margin:0 0 4px;}
+.listArea .bottom{clear:both;height:30px;width:253px;margin-left:-15px;border-top:1px solid #ececec;overflow:hidden;}
+.listArea .bottom ul{height:30px;margin-top:0;}
+.listArea .bottom ul:after{content:'';display:block;clear:both;}
+.listArea .bottom li{float:left;display:inline-block;width:125px;height:100%;font-size:12px;line-height:30px;text-align:center;color:#898989;border-left:1px solid #ececec;}
+.listArea .bottom li:first-child{border-left:none;};
+.listArea .bottom li span{font-family:Tahoma;letter-spacing:0;}
+.listArea .noThumb a{padding:15px 15px 0;border-top:1px solid #e3e3e3;}
+.listArea .noThumb .desc{height:251px;}
+.listArea .noThumb .editor{position:absolute;top:259px;left:0;width:251px;height:66px;background:#FFF;border-top:1px solid #ececec;overflow:inherit;}
+.listArea .noThumb .editor p{top:15px;left:60px;color:#232323;}
+.listArea .noThumb .editor .cover{z-index:1;top:-20px;left:0;height:19px;background:#FFF;}
+.listArea .noThumb .editor .profileImg{top:15px;left:15px;}
+.listArea .date{display:block;color:#898989;font-size:12px;font-family:Tahoma;letter-spacing:0;margin:0 0 15px;}
+.listArea .recommend{z-index:2;position:absolute;top:0;right:10px;display:block;width:45px;height:41px;font:0/0 arial;text-indent:-9999px;background:url('//img.tourtips.com/images/pc/dest/ico_recommend_v3.png') no-repeat;overflow:hidden;}
+.listArea .border{z-index:3;position:absolute;top:0;left:0;width:251px;height:322px;border:1px solid #000;opacity:0.1;filter:alpha(opacity=10)}
+#contentWrap .listArea ul{width:1150px;}
+#contentWrap .listArea li{margin-right:26px;}
+#contentWrap .listArea .bottom li{margin:0;}
+.listArea.noHidden{overflow:inherit;margin-bottom:0;}
+
+/* listArea : style01 */
+.listArea .style01 .editor{position:inherit;height:75px;text-align:center;margin:-45px 0 5px -16px;}
+.listArea .style01 .editor p{position:inherit;top:0;left:0;width:100%;text-align:center;color:#898989;margin-top:3px;}
+.listArea .style01 .editor img{position:inherit;top:0;left:0;display:inline-block;width:50px;height:50px;border:2px solid #FFF;border-radius:40px;}
+.listArea .style01 .title{height:43px;line-height:22px;white-space:normal;overflow:hidden;}
+.listArea .style01 .border{height:360px;}
+
+/* listArea : style02 */
+.listArea .style02 li{height:344px;}
+.listArea .style02 .desc{height:43px;}
+.listArea .style02 .border{height:342px;}
+
+/* listArea : style03 */
+.listArea .style03 li{height:auto;}
+.listArea .style03 li a{z-index:3;}
+.listArea .style03 .title{height:43px;line-height:22px;margin-bottom:8px;white-space:normal;overflow:hidden;}
+@media \0screen {
+    .listArea .style03 .title{height:42px;}
+}
+.listArea .style03 .writer{z-index:20;position:relative;display:inline-block;height:19px;font-size:14px;color:#777;vertical-align:top;margin:0 0 11px;}
+.listArea .style03 .writer .icoEditor:hover{text-decoration:none;}
+.listArea .style03 .writer .ico.openeditor{display:inline-block;width:15px;height:19px;font:0/0 arial;text-indent:-9999em;vertical-align:top;margin-right:5px;background:url('//img.tourtips.com/images/cm/ico/spr_community.png') -16px -16px no-repeat;}
+.listArea .style03 .pic_list .writer .icoEditor:hover{text-decoration:underline;}
+.listArea .style03 .bottom ul{width:100%;}
+.listArea .style03 .bottom li{width:33%;vertical-align:middle;}
+.listArea .style03 .bottom li i.ico{position:relative;top:-1px;display:inline-block;width:16px;height:10px;vertical-align:middle;background:url('//img.tourtips.com/images/cm/ico/spr_community.png') no-repeat;}
+.listArea .style03 .bottom li i.ico.view{background-position:0 -35px;}
+.listArea .style03 .bottom li i.ico.recomm{width:13px;height:12px;background-position:-16px -35px;}
+.listArea .style03 .bottom li i.ico.reply{width:12px;height:12px;background-position:-29px -35px;}
+.listArea .style03 .bottom li em{vertical-align:middle;}
+.listArea .style03 + .more{top:-5px;color:#898989;font-size:12px;}
+.listArea .style03 .border{height:325px;}
+
+/* listArea : style04 */
+.listArea .style04 ul{margin-top:-22px;}
+.listArea .style04 li{height:auto;margin-top:22px;}
+.listArea .style04 li a{border:none;}
+.listArea .style04 .thumb{top:0;left:0;}
+.listArea .style04 .border{z-index:3;position:absolute;top:0;left:0;width:251px;height:360px;border:1px solid #000;opacity:0.1;filter:alpha(opacity=10)}
+.listArea .style04 a:hover{border:none;}
+.listArea .style04 .likeArea{z-index:4;position:relative;width:251px;border-top:1px solid #e1e1e1;margin:0 0 0 -14px;}
+.listArea .style04 .likeArea ul{width:100%;height:50px;}
+.listArea .style04 .likeArea li{float:left;display:inline-block;width:83px;height:50px;border-left:1px solid #e1e1e1;}
+.listArea .style04 .likeArea li:first-child{border:none;}
+.listArea .style04 .likeArea button{text-align:center;width:100%;height:100%;margin:0;padding:0;font:0/0 arial;letter-spacing:0;}
+.listArea .style04 .likeArea span{display:block;text-align:center;font:normal 12px "NanumBarunGothic";color:#898989;}
+.listArea .style04 .likeArea button .ico{display:inline-block;width:21px;height:18px;margin:0 0 5px;background:url('//img.tourtips.com/images/pc/mypage/spr_ico.png') no-repeat;}
+.listArea .style04 .likeArea .awesome .ico{width:27px;background-position:0 0;}
+.listArea .style04 .likeArea .good .ico{background-position:-27px 0;}
+.listArea .style04 .likeArea .aweful .ico{background-position:-48px 0;}
+.listArea .style04 .likeArea .cur span{color:#232323;}
+.listArea .style04 .likeArea .awesome .cur .ico{width:27px;background-position:0 -18px;}
+.listArea .style04 .likeArea .good .cur .ico{background-position:-27px -18px;}
+.listArea .style04 .likeArea .aweful .cur .ico{background-position:-48px -18px;}
+
+/* listArea : mvStyle */
+.listArea .mvStyle li{width:251px;height:246px;border:1px solid #e3e3e3;}
+.listArea .mvStyle li:hover{border-color:#cecece;}
+.listArea .mvStyle li a{width:100%;height:100%;padding:0;border:none;}
+.listArea .mvStyle .thumb{position:relative;height:142px;}
+.listArea .mvStyle .thumb .cover{z-index:2;position:absolute;top:0;left:0;display:block;width:100%;height:100%;background:url('//img.tourtips.com/images/cm/cover_mvlist.png') repeat-x;}
+.listArea .mvStyle .thumb .ico{z-index:3;position:absolute;top:20px;right:20px;display:block;width:26px;height:30px;background:url('//img.tourtips.com/images/cm/spr_ico_common.png') -250px 0 no-repeat;}
+.listArea .mvStyle .thumb img{z-index:1;position:relative;width:253px;min-height:142px;}
+.listArea .mvStyle a:hover .thumb img{opacity:1;filter:alpha(opacity=100)}
+.listArea .mvStyle .title{height:48px;white-space:normal;line-height:24px;text-overflow:inherit;margin:10px 16px 9px 16px;overflow:inherit;overflow:hidden;}
+.listArea .mvStyle .bottom{position:absolute;bottom:0;left:0;margin:0;}
+.listArea .mvStyle .bottom li{width:125px;height:30px;border-width:0 0 0 1px;}
+.listArea .mvStyle .videoWrap{z-index:3;position:absolute;top:-1px;left:-1px;width:253px;height:142px;}
+.listArea .mvStyle .videoWrap .videoOverlay{position:absolute;top:0;left:0;width:253px;height:142px;background:#FFF;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);opacity:0;}
+
+/* slideListWrap */
+#slideListWrap{width:803px;height:363px;padding:0;}
+
+/* guidebookList */
+.guidebookList{margin:0 0 40px;overflow:hidden;}
+.guidebookList ul{display:block;width:1100px;margin-left:-51px;}
+.guidebookList li{position:relative;float:left;display:inline-block;width:120px;height:195px;margin:0 0 0 51px;}
+.guidebookList li a{display:block;width:100%;height:100%;}
+.guidebookList .thumb{position:relative;display:block;width:120px;height:168px;margin:0 0 14px;overflow:hidden;}
+.guidebookList .thumb img{z-index:1;position:relative;display:block;width:120px;}
+.guidebookList .border{z-index:2;position:absolute;top:0;left:0;display:block;width:118px;height:166px;border:1px solid #000;opacity:0.1;filter:alpha(opacity=10);}
+.guidebookList .thumb.other{width:118px;height:166px;border:1px solid #ececec;}
+/*.guidebookList .thumb.other img{left:-32px;}*/
+.guidebookList .download{position:relative;display:block;color:#898989;font-size:13px;}
+.guidebookList .download i{position:absolute;top:-2px;right:0;text-align:right;font-style:normal;font-family:"Tahoma";}
+.guidebookList .othBook .bookWrap{position:relative;width:104px;height:144px;padding:10px 8px 14px 8px;margin-bottom:13px;}
+.guidebookList .othBook .bookWrap .title{position:absolute;top:0;left:0;display:block;width:104px;height:31px;font-weight:normal;line-height:130%;padding:7px 8px;margin:0 0 5px;overflow:hidden;border-top:2px solid #eb5e00;}
+.guidebookList .othBook .bookWrap .by{position:absolute;top:51px;left:8px;display:block;width:104px;color:#777;font-size:11px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.guidebookList .othBook .bookWrap .thumb{position:absolute;bottom:0;left:8px;width:120px;height:100px;margin:0 0 0 -8px;}
+.guidebookList .othBook .bookWrap .thumb img{position:relative;top:0;left:0;height:120px;}
+
+/* editorArea */
+.editorArea{position:relative;}
+.editorArea .editor_info{position:absolute;top:2px;right:0;text-align:right;font-size:14px; color:#232323}
+.editorArea .editor_info strong{color:#ff4f02;}
+.editorArea .editor_info.desc{color:#898989;font-size:14px;}
+.editorArea .editor_info i{font-style:normal;font-family:"Tahoma";}
+.editorArea .new_des_editor_box{position:relative;border:1px solid #e3e3e3;overflow:hidden}
+.editorArea .new_des_editor_list {margin-top:20px; padding:0 0 0 30px; font-size:0}
+.editorArea .new_des_editor_list >li {display:inline-block; *display:inline; zoom:1; margin-right:25px; margin-bottom:25px; width:60px; vertical-align:top}
+.editorArea .new_des_editor_list >li img {width:60px; height:60px;border-radius:45px;overflow:hidden;}
+.editorArea .new_des_editor_list >li p {margin-top:5px; text-align:center; font-size:13px; color:#232323}
+.editorArea .new_des_editor_list >li.last {margin-right:0}
+.editorArea .new_des_editor_box .new_des_editor_more {position:absolute; bottom:0; left:0; width:100%; height:21px; background:#fff; border:0; border-top:1px solid #e2e2e2; text-align:center; font-size:11px; color:#232323; cursor:pointer}
+.editorArea .new_des_editor_box .new_des_editor_more:hover{background:#f7f7f7;}
+.editorArea .new_des_editor_box .new_des_editor_more img {vertical-align:middle}
+.editorArea .openEditArea{margin-top:14px;}
+.editorArea .openEditArea p{float:left;display:inline-block;color:#898989;font-size:13px;line-height:140%;}
+.editorArea .openEditArea a{float:right;}
+#wrap .editorArea h2{font-size:19px;font-weight:normal;margin-bottom:7px;}
+#wrap .editorArea h2 strong{color:#ff4f02;letter-spacing:0;font-family:"Tahoma";}
+
+/* likeArea */
+.likeArea button{display:block;width:70px;height:70px;overflow:hidden;margin:0 auto 10px auto;background:url('//img.tourtips.com/images/cm/ico/spr_ico_like.png') 0 0 no-repeat;}
+.likeArea span{color:#232323;font-size:14px;}
+.likeArea span i{position:relative;top:1px;font-style:normal;font-weight:bold;font-family:"Tahoma";font-size:16px;}
+.likeArea li{display:inline-block;width:152px;text-align:center;border-left:1px solid #ececec;}
+.likeArea li:first-child{border-left:none;}
+.likeArea .awesome button{background-position:0 0;}
+.likeArea .awesome.cur button{background-position:0 -70px;}
+.likeArea .awesome.cur  i{color:#ff5e36;}
+.likeArea .good button{background-position:-70px 0;}
+.likeArea .good.cur button{background-position:-70px -70px;}
+.likeArea .good.cur i{color:#18be9c;}
+.likeArea .aweful button{background-position:-140px 0;}
+.likeArea .aweful.cur button{background-position:-140px -70px;}
+.likeArea .aweful.cur i{color:#44a2e1;}
+.likeArea strong.title{display:block;font-size:22px;font-weight:normal;;color:#232323;font-family:"NanumBarunGothic";margin:40px 0 30px 0;}
+
+/* snsArea */
+.snsArea{position:relative;text-align:center;margin:0 0 20px;}
+.snsArea .likeArea{margin:0 0 30px;}
+.snsArea .likeArea .txt{display:block;text-align:center;color:#777;font-size:12px;margin:20px 0 0 0;}
+.snsArea .likeArea .txt a{color:#777;text-decoration:underline;}
+.snsArea .shareList{border:1px solid #e3e3e3;*zoom:1;}
+.snsArea .shareList:after{content:'';display:block;clear:both;}
+.snsArea .shareList li{float:left;display:inline-block;width:158px;height:30px;border-left:1px solid #e3e3e3;}
+.snsArea .shareList li:first-child{border:none;}
+.snsArea .shareList li a{display:block;width:100%;height:100%;line-height:30px;font-size:13px;color:#232323;}
+.snsArea .shareList li a:hover{text-decoration:underline;}
+.snsArea .shareList li a .ico{position:relative;top:3px;display:inline-block;width:8px;height:16px;margin-right:7px;background:url('//img.tourtips.com/images/cm/spr_ico_common.png') no-repeat;}
+.snsArea .shareList li a .ico.facebook{background-position:-150px -200px;}
+#contentWrap .snsArea .shareList li{width:216px;}
+.snsArea.other{padding:30px 0;border:1px solid #e3e3e3;border-top:none;margin-top:-40px;}
+.snsArea.other .likeArea{margin:0;}
+
+/* review 13.07.01*/
+#review_area{margin:0 0 40px;}
+.new_review_write_dv {position:relative; padding:19px 18px; border:1px solid #ddd; border-bottom:none; background:#f2f2f2 url('//img.tourtips.com/images/cm/review/write_box_bg.gif') repeat-x left bottom; vertical-align:middle}
+.new_review_bubble {position:absolute; top:-20px; left:17px; padding:6px 10px; width:268px; height:25px; letter-spacing:-1px;background:url('//img.tourtips.com/images/cm/review/bubble.png') no-repeat left top}
+.new_review_bubble_close {position:absolute; top:10px; right:10px; display:inline-block; *display:inline; zoom:1; width:9px; height:9px; background:url('//img.tourtips.com/images/cm/review/bubble_close.gif') no-repeat left top; cursor:pointer}
+.new_review_write_img {position:absolute; display:inline-block; *display:inline; zoom:1; margin-top:-25px; top:50%; left:18px}
+#profile_pic {display:none}
+.new_review_user_change {display:block; zoom:1; position:absolute; top:0; left:0; padding:19px 0; width:50px; background:url('//img.tourtips.com/images/cm/review/dim_bg.png') no-repeat left top; text-align:center; text-decoration:underline; font-size:11px; color:#fff; cursor:pointer}
+.new_review_write {float:left;display:inline-block;margin-left:70px; width:80%; height:47px; resize:none; letter-spacing:0; line-height:18px; font-size:14px; color:#666}
+.new_review_write_label {position:absolute; top:26px; left:94px; font-size:13px; color:#999; font-weight:normal}
+#contentWrap .new_review_write{width:86%;}
+.new_review_list_sec {position:relative; margin-top:30px;margin-bottom:40px;}
+.new_review_sort_btns {position:absolute; top:0; right:10px}
+.new_review_sort li {margin-left:10px; padding-left:10px; display:inline-block; *display:inline; zoom:1; border-left:1px solid #ccc; font-size:13px; color:#999}
+.new_review_sort li.reverse {background-position: right -30px}
+.new_review_sort li.selected {font-weight:600}
+.new_review_sort li a {color:#999}
+.new_review_sort li.selected a {color:#000}
+.new_review_sort li:first-child {border-left:none}
+.new_review_num {display:inline-block; *display:inline; zoom:1; padding-bottom:10px; width:100%; border-bottom:1px solid #ddd; color:#000}
+.new_review_list li {position:relative; padding:15px 21px 15px 30px; border-top:1px solid #ddd}
+.new_review_list li.blank_list {position:relative; padding:0 21px 15px 30px; border-top:none}
+.new_review_list li.blank_list .reply:first-child {margin-top:0; border-top:none}
+.new_review_list li img {cursor:pointer}
+.new_review_list > li:first-child {border-top:none}
+.new_review_list li.reply {padding-left:90px; background:url('//img.tourtips.com/images/cm/review/reply_arrow.gif') no-repeat 40px 15px}
+.new_review_list li.reply {margin-left:-30px; margin-right:-21px}
+.new_review_list li.reply:first-child {margin-top:20px}
+.new_review_list li.reply:last-child {padding-bottom:0}
+.new_review_list_info {display:inline-block; *display:inline; zoom:1; margin-left:14px; width: 680px; vertical-align:top}
+.new_review_list_info .is_new {display:inline-block; *display:inline; zoom:1; margin-left:5px; width:10px; height:10px; background:url('//img.tourtips.com/images/cm/review/new_top_notice.jpg') no-repeat left top}
+.new_review_list_info:after {content:''; display:block; clear:both}
+.new_review_list li.reply .new_review_list_info {width:92.5%}
+.new_review_user_info {display:inline-block; *display:inline; zoom:1; margin-bottom:7px; width:100%}
+.new_review_mt_ico {display:inline-block; *display:inline; zoom:1; margin-right:3px; width:18px; height:17px; background:url('//img.tourtips.com/images/cm/review/tourtips_ico.jpg') no-repeat left top; vertical-align:middle}
+.new_review_t_ico {display:inline-block; *display:inline; zoom:1; margin-right:3px; width:18px; height:17px; background:url('//img.tourtips.com/images/cm/review/tourtips_editor.jpg') no-repeat left top; vertical-align:middle}
+.new_review_o_ico {display:inline-block; *display:inline; zoom:1; margin-right:3px; width:15px; height:19px; background:url('//img.tourtips.com/images/cm/review/open_editor.png') no-repeat left top; vertical-align:middle}
+.new_review_l_ico {display:inline-block; *display:inline; zoom:1; margin-right:3px; width:15px; height:14px; background:url('//img.tourtips.com/images/cm/review/line_editor.png') no-repeat left top; vertical-align:middle}
+.new_review_user_name {font-weight:600; font-size:13px; color:#000}
+.new_review_date {margin-left:10px; font-size:12px; color:#999}
+.new_review_totalcomment {display:inline-block; max-width:100%; word-wrap:break-word; *word-break: break-all; vertical-align:top}
+.new_review_list_comment {line-height:18px; font-size:14px; color:#666;letter-spacing:0;}
+.new_review_list_top {position:absolute; top:15px; right:27px}
+.new_review_list_top label {margin-left:20px; font-weight:normal; font-size:11px}
+.new_review_list_top label a {color:#666}
+.new_review_reply_input {width:98.5%; height:48px; background:#f5f5f5; line-height:18px; resize:none; font-size:13px}
+.new_review_btns {display:inline-block; *display:inline; zoom:1; margin-top:5px; float:right}
+.new_review_btns .button {text-align:right; margin-left:5px}
+.new_review_more {position:relative; margin-top:30px; width:100%; height:40px; border:1px solid #ddd; border-bottom:none; background:url('//img.tourtips.com/images/cm/review/more_bg.gif') repeat-x left top}
+.new_review_more_btn {position:absolute; top:50%; left:50%; margin-left:-27px; margin-top:-8px; display:inline-block; *display:inline; zoom:1; padding-right:5px; width:48px; background:url('//img.tourtips.com/images/cm/review/more_arrow.gif') no-repeat right 7px; color:#000; font-weight:600; font-size:14px}
+
+/* review popup */
+.userinfo_pop_wrap {position:absolute; display:none; width:335px; z-index:10000}
+.userinfo_pop_header {height:48px;vertical-align:middle;padding:0 0 0 21px !important;background:url('//img.tourtips.com/images/cm/review/openeditor_pop_header.gif') no-repeat left top}
+.userinfo_pop_header span{display:inline-block;vertical-align:middle;}
+.userinfo_pop_header .vBlank{width:0;height:100%;}
+.userinfo_pop_title {position:relative; vertical-align:middle; margin-left:5px; font-size:18px; font-weight:600; color:#fff}
+.userinfo_set_btn {position:absolute; top:17px; right:41px; display:inline-block; *display:inline; zoom:1; width:16px; height:16px; background:url('//img.tourtips.com/images/cm/review/set_btn.png') no-repeat left top}
+.userinfo_close_btn {float:right;display:inline-block;*display:inline; zoom:1; width:50px; height:48px; background:url('//img.tourtips.com/images/cm/review/close_btn.png') no-repeat center center; cursor:pointer}
+.userinfo_pop_darkgray {padding:20px; background:#373736}
+.userinfo_pop_gray {position:relative; padding:20px; background:#555;}
+.userinfo_pop_footer {padding:20px; background:url('//img.tourtips.com/images/cm/review/openeditor_pop_footer.png') no-repeat left bottom}
+.userinfo_pop_thumb {vertical-align:top}
+.userinfo_pop_comment {display:inline-block; *display:inline; zoom:1; margin-left:15px; vertical-align:top; line-height:18px; width:196px; font-size:13px; color:#ccc; word-wrap:break-word}
+.userinfo_pop_comment a {color:#ccc; text-decoration:underline; word-wrap:break-word}
+.userinfo_pop_whitetitle {padding-left:9px; background:url('//img.tourtips.com/images/cm/review/bullet_white.gif') no-repeat left center; font-size:14px; color:#fff; font-weight:600}
+.userinfo_editor_wrap {position:absolute; top:20px; right:20px}
+.want_make_comment {position:absolute; /* display:none; */ zoom:1; right:0; top:30px; padding:25px; min-width:270px; border:1px solid #999; background:#fff;  z-index:50}
+.want_make_comment_arrow {position:absolute; display:inline-block; *display:inline; top:-7px; right:70px; width:11px; height:7px; background:url('//img.tourtips.com/images/cm/help_tip.gif') no-repeat left top}
+.userinfo_editor_wrap .want_make_comment {padding:15px; right:-13px;background:#FFF;}
+.userinfo_editor_wrap .want_make_comment_arrow {right:41px}
+.want_make_comment p {color:#ff0000; font-size:13px; font-weight:600; margin-bottom:10px}
+.want_make_comment span {font-size:11px; line-height:16px;;}
+.want_make_comment a {color:#0042ff; text-decoration:underline}
+.userinfo_pop_editor_title {height:30px; font-size:12px; color:#ccc; text-decoration:underline; cursor:pointer}
+.userinfo_pop_citylist {margin-top:5px; margin-left:10px}
+.userinfo_pop_citylist li {display:inline-block; *display:inline; zoom:1; margin-top:5px; width:48%; color:#ddd}
+.userinfo_pop_citylist li img {vertical-align:middle;width:32px;}
+.userinfo_pop_cityname {margin-left:5px}
+.userinfo_pop_blacktitle {padding-left:9px; background:url('//img.tourtips.com/images/cm/bullet_gray3.gif') no-repeat left center; font-size:14px; color:#000; font-weight:600}
+.userinfo_pop_footer span {display:inline-block;color:#666; *display:inline; zoom:1; margin:10px 0 0 10px}
+.userinfo_pop_visitcity {margin-bottom:20px !important}
+.user_list_info {cursor:pointer}
+.load_user_info{cursor:pointer;}
+/* review popup 13.07.01 */
+
+/* Button Reset */
+.button,
+.button a,
+.button button,
+.button input { position:relative; margin:0; display:-moz-inline-stack; display:inline-block; *display:inline; zoom:1; text-decoration:none !important; border:0; font-size:12px; white-space:nowrap; background:url('//img.tourtips.com/images/cm/btn/btn_white.gif') no-repeat; overflow:visible; color:#666}
+.button { height:24px; padding:0; vertical-align:middle; background-position:left top}
+.button a,
+.button button,
+.button input{ left:2px; vertical-align:top; cursor:pointer}
+/* Button Size */
+.button.large { height:28px; background-position:left -30px}
+.button.midium { height:38px; text-align:center; background-position:left -65px}
+.button.xLarge { height:59px; text-align:center; background-position:left -65px}
+.button.xxLarge { height:59px; text-align:center; background-position:left -65px}
+.button.small { height:19px; background-position:left -130px}
+.button a,
+.button button,
+.button input { height:24px; padding:0 10px 0 8px; font-size:12px; line-height:24px; background-position:right top}
+.button.large a,
+.button.large button,
+.button.large input { height:28px; padding:0 10px 0 8px; font-size:16px; line-height:30px; background-position:right -30px}
+.button.midium a,
+.button.midium button,
+.button.midium input { height:38px; font-weight:600; padding:0 20px; font-size:18px; line-height:38px; background-position:right -65px}
+.button.xLarge a,
+.button.xLarge button,
+.button.xLarge input { height:59px; padding:0 14px 0 11px; font-size:14px; line-height:59px; background-position:right -65px}
+.button.xxLarge a,
+.button.xxLarge button,
+.button.xxLarge button,
+.button.xxLarge input { height:59px; padding:0 45px 0 42px; font-size:14px; line-height:59px; background-position:right -65px}
+.button.small a,
+.button.small button,
+.button.small input { height:19px; padding:0 6px 0 4px; font-size:11px; line-height:19px; background-position:right -130px}
+/* Button Text Color */
+.button *:hover,
+.button *:active,
+.button *:focus{ color:#690}
+.button.black,
+.button.black a,
+.button.black button,
+.button.black input { background-image:url('//img.tourtips.com/images/cm/btn/btn_black.gif'); color:#fff}
+.button.black *:hover,
+.button.black *:active,
+.button.black *:focus{ color:#fff}
+.button.white,
+.button.white a,
+.button.white button,
+.button.white input { background-image:url('//img.tourtips.com/images/cm/btn/btn_white.gif'); color:#666}
+.button.white *:hover,
+.button.white *:active,
+.button.white *:focus{ color:#666}
+/* Button Text Strong */
+.button.strong * { font-weight:600 !important}
+
+/* 기본 모달윈도우 */
+.mw     { position:fixed; _position:absolute; z-index:99999; top:0; left:0; width:100%; height:100%}
+.mw .bg { position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:.5; filter:alpha(opacity=50)}
+.mw .fg { position:absolute; top:50%; left:50%; width:360px; height:160px; margin:-100px 0 0 -200px; padding:20px; border:3px solid #ccc; background:#fff}
+.mw_close{ position:absolute; top:10px; right:-43px; cursor:pointer}
+.mw textarea, .mw input[type="text"]{
+    padding:5px;
+    background-color:#f5f5f5;
+    border:1px solid #ddd;
+    -webkit-box-shadow:inset 1px 1px 1px 0 rgba(0, 0, 0, 0.35);
+       -moz-box-shadow:inset 1px 1px 1px 0 rgba(0, 0, 0, 0.35);
+            box-shadow:inset 1px 1px 1px 0 rgba(0, 0, 0, 0.35)}
+.mw textarea:focus, .mw input[type="text"]:focus{
+    color:#666;
+    background-color:#f5f5f5;
+    border-color:#ddd;
+    outline:0;
+    /* IE6-9 */
+    -webkit-box-shadow:inset 1px 1px 1px 0 rgba(0, 0, 0, 0.35), 0 0 0 0 rgba(0, 0, 0, 0.35);
+       -moz-box-shadow:inset 1px 1px 1px 0 rgba(0, 0, 0, 0.35), 0 0 0 0 rgba(0, 0, 0, 0.35);
+            box-shadow:inset 1px 1px 1px 0 rgba(0, 0, 0, 0.35), 0 0 0 0 rgba(0, 0, 0, 0.35)}
+#imagePopUp.mw .bg{opacity:0.8;filter:alpha(opacity=80);}
+/* MY스크랩팝업 */
+.popScrap{ position:absolute; top:50%; left:50%; margin:-230px 0 0 -200px; width:360px}
+.popScrap strong{ font-size:18px; color:#000;line-height:120%;}
+.popScrap strong span{ color:#ff6610}
+.popScrap .scrapHeader{ height:34px; padding:13px 0 0 0; text-align:center; background:#fff; -webkit-border-radius:4px 4px 0 0; -moz-border-radius:4px 4px 0 0; border-radius:4px 4px 0 0}
+.popScrap .scrapBody{ padding:15px 30px 0 30px; font-size:13px; color:#666; text-align:center; background-color:#fff; background-position:top left; background-repeat:repeat-x}
+.bodybg1{ background-image:url('//img.tourtips.com/images/cm/bg_scrap.gif')}
+.bodybg2{ background-image:url('//img.tourtips.com/images/cm/bg_scrap2.gif')}
+.popScrap .scrapBody .tourImg{ padding:15px 0}
+.tourSelect{ position:relative; z-index:50; margin-bottom:3px; text-align:left}
+.tour_selectbar{ width:282px; height:25px; padding:9px 0 0 18px; border-bottom:3px solid gray; background:transparent url('//img.tourtips.com/images/pc/popup/tour_selctbar.gif')}
+.tourSelect a{ color:#666}
+.tourSelect ul{ margin-top:-3px; max-height:99px; width:300px; background:#fff; overflow:auto}
+.tourSelect li{ padding:9px 0 9px 18px; border:1px solid #ddd; border-top:0}
+.tourSelect li:hover{ background:#e6e6e6}
+.tourSelect .make{ border:1px solid #ddd; *height:35px; *width:290px; border-bottom-color:#999; padding:9px 0; *padding-left:8px; text-align:center; background:#fff}
+.tourSelect .make button{ *margin-left:3px; vertical-align:middle}
+.tourSelect .make button{ width:60px; height:33px; border:0; cursor:pointer; background:url('//img.tourtips.com/images/pc/popup/btn_make.gif'); text-indent:-9999px}
+.btn_orange{ margin-top:15px}
+.btn_orange button{ z-index:20}
+.opened{ display:block}
+.popScrap .scraFooter{ height:20px; color:#fff; background:#fff; -webkit-border-radius:0 0 4px 4px; -moz-border-radius:0 0 4px 4px; border-radius:0 0 4px 4px}
+/* 회원가입 테이블 */
+.join_btn_group{ position:relative; margin-top:30px; text-align:center}
+.btn_rt{ position:absolute; top:0; right:0}
+.join_btn,
+.join_btn a,
+.join_btn button { position:relative; margin:0; display:-moz-inline-stack; display:inline-block; text-decoration:none !important; border:0; font-size:18px; white-space:nowrap; background:url('//img.tourtips.com/images/pc/join/btn_orange.gif') no-repeat; overflow:visible; color:#fff}
+.join_btn { height:38px; padding:0; vertical-align:middle; background-position:left top}
+.join_btn a,
+.join_btn button { left:2px; vertical-align:top; cursor:pointer}
+.join_btn a,
+.join_btn button { height:38px; padding:0 20px 0 18px; font-size:18px; font-weight:600; line-height:38px; background-position:right top}
+
+/* Select */
+.select{ position:relative; line-height:normal; display:inline-block; *display:inline; *margin-right:2px; *zoom:1}
+.select *{ margin:0; padding:0; cursor:pointer; font-size:13px}
+.select .myValue{ position:relative; z-index:2; left:0; top:0; border:0; color:#666; line-height:27px; _line-height:normal; text-align:left; overflow:visible; background:transparent; background-position:top left; background-repeat:no-repeat}
+.select .myValue.selected{ font-weight:600; color:#000}
+.select.open .myValue,
+.select .myValue.outLine{ border:0}
+.select button.myValue{ height:27px; width:100%; text-indent:5px; *text-indent:0; padding-left:3px; *padding-left:7px}
+.select div.myValue{ padding-left:10px; height:27px}
+.select div.myValue2{ height:17px; line-height:17px; white-space:nowrap}
+.select .ctrl{ position:absolute; top:0; right:-1px; width:27px; height:27px; background:url('//img.tourtips.com/images/cm/bg_select.gif') top left no-repeat}
+.select .ctrl_small{ top:0; right:-1px; width:17px; height:17px; background:url('//img.tourtips.com/images/cm/bg_select2.gif') top left no-repeat}
+.select .arrow{ position:absolute; width:0; height:0; top:12px; right:11px; line-height:0; font-size:0; border-top:3px solid #000; border-left:3px solid #fff; border-right:3px solid #fff}
+.select .arrow2{ top:7px; right:6px}
+.select ul{ top:26px; left:0; width:100%; list-style:none; border:0; border-top:1px solid #bababa; border-bottom:1px solid #bababa; background:#fff; overflow:hidden}
+.select ul.aList{ display:none}
+.select ul.list_ul{ top:17px;z-index:10;}
+.select.open ul.aList{ display:block}
+.select ul.iList{ display:none; left:-20000px}
+/*.select ul.iList{display:;}*/
+.select.open ul.iList{ display:block; left:0}
+.select.open ul.iList2{ height:240px; overflow:auto}
+.select li{ position:relative; overflow:hidden; white-space:nowrap; height:24px; border-left:1px solid #bababa; border-right:1px solid #bababa}
+.select li input.option{ position:absolute; width:100%; height:24px; line-height:24px}
+.select li label{ position:absolute; left:0; top:0; width:100%; text-indent:8px; *text-indent:6px; line-height:24px; color:#666; background:#fff; font-weight:normal}
+.select li a{ display:block; text-indent:8px; *text-indent:6px; height:24px; line-height:24px; color:#666; background:#fff; text-decoration:none}
+.select li.hover *{ background:#e5e5e5; color:#000}
+.selectbar_220{ background-image:url('//img.tourtips.com/images/cm/bg_selectbar220.gif')}
+.selectbar_110{ background-image:url('//img.tourtips.com/images/cm/bg_selectbar110.gif')}
+.selectbar_300{ background-image:url('//img.tourtips.com/images/cm/bg_selectbar300.gif')}
+/* Select Right */
+.selet_rt   { position:absolute; z-index:50; top:23px; right:30px}
+
+/* Select */
+.select_r{ position:relative; line-height:normal; display:inline-block; *display:inline; *margin-right:2px; vertical-align:middle; *zoom:1}
+.select_r *{ margin:0; padding:0; cursor:pointer; font-size:13px}
+.select_r .myValue{ position:relative; z-index:2; left:0; top:0; border:0; color:#666; line-height:27px; _line-height:normal; text-align:left; overflow:visible; background:transparent; background-position:top left; background-repeat:no-repeat}
+.select_r .myValue.selected{ font-weight:600; color:#000}
+.select_r.open .myValue,
+.select_r .myValue.outLine{ border:0}
+.select_r button.myValue{ height:27px; width:100%; text-indent:5px; *text-indent:0; padding-left:3px; *padding-left:7px}
+.select_r div.myValue{ height:27px; text-indent:8px}
+.select_r div.myValue2{ height:17px; line-height:17px}
+.select_r .ctrl{ position:absolute; top:0; right:-1px; width:27px; height:27px; background:url('//img.tourtips.com/images/cm/bg_select.gif') top left no-repeat}
+.select_r .ctrl_small{ top:0; right:-1px; width:17px; height:17px; background:url('//img.tourtips.com/images/cm/bg_select2.gif') top left no-repeat}
+.select_r .arrow{ position:absolute; width:0; height:0; top:12px; right:11px; line-height:0; font-size:0; border-top:3px solid #000; border-left:3px solid #fff; border-right:3px solid #fff}
+.select_r .arrow2{ top:7px; right:6px}
+.select_r ul{ top:26px; left:0; width:100%; list-style:none; border:0; border-top:1px solid #bababa; border-bottom:1px solid #bababa; background:#fff; overflow:hidden}
+.select_r ul.aList{ display:none}
+.select_r ul.list_ul{ top:17px;z-index:10;}
+.select_r.open ul.aList{ display:block}
+.select_r ul.iList{ left:-2000%}
+/*.select ul.iList{display:;}*/
+.select_r.open ul.iList{ left:0}
+.select_r.open ul.iList2{ height:120px; overflow:auto}
+.select_r li{ position:relative; overflow:hidden; white-space:nowrap; height:24px; border-left:1px solid #bababa; border-right:1px solid #bababa}
+.select_r li input.option{ position:absolute; width:100%; height:24px; line-height:24px}
+.select_r li label{ position:absolute; left:0; top:0; width:100%; text-indent:8px; *text-indent:6px; height:24px; line-height:24px; color:#666; background:#fff}
+.select_r li a{ display:block; text-indent:8px; *text-indent:6px; height:24px; line-height:24px; color:#666; background:#fff; text-decoration:none}
+.select_r li.hover *{ background:#e5e5e5; color:#000}
+.selectbar_220{ background-image:url('//img.tourtips.com/images/cm/bg_selectbar220.gif')}
+.selectbar_110{ background-image:url('//img.tourtips.com/images/cm/bg_selectbar110.gif')}
+.selectbar_300{ background-image:url('//img.tourtips.com/images/cm/bg_selectbar300.gif')}
+/* Select Right */
+.selet_rt   { position:absolute; z-index:50; top:23px; right:30px}
+.common_pop_wrap   { position:absolute; top:50%; left:50%; margin:-200px 0 0 -150px; min-width:355px; max-width:1000px}
+.common_pop_header {margin-right:48px; height:50px; background:url('//img.tourtips.com/images/cm/common_pop_left.gif') no-repeat left top}
+.common_pop_title {margin-left:30px; padding-top:15px; color:#fff; font-size:18px; font-weight:600}
+.common_pop_close {position:absolute; top:0;right:0; display:inline-block; *display:inline; zoom:1; width:48px; height:50px}
+.common_none_close {background:url('//img.tourtips.com/images/cm/openeditor_pop_header.gif') no-repeat right top}
+.common_pop_body    { min-width:355px; background:url('//img.tourtips.com/images/cm/common_pop_bottom_left.gif?t=1') no-repeat left bottom}
+.common_pop_body a {text-decoration:underline}
+.common_pop_contents    { position:relative; margin-left:3px; padding:20px 40px 40px 40px; background:url('//img.tourtips.com/images/cm/common_pop_bottom_right.gif?t=1') no-repeat right bottom; text-align:center}
+.common_pop_contents .pop_number { font-size:20px; line-height:24px;font-weight:600; color:#000}
+.common_pop_contents .pop_number strong { font-size:50px; color:#ff6610}
+.common_pop_contents .content_info{ margin-top:10px; color:#ff6610}
+.common_pop_contents .banner {display:block; margin:0 -30px -30px -33px}
+.common_pop_contents label {font-size:14px; color:#000; font-weight:normal}
+.common_pop_contents .common_pop_form {margin-top:10px; margin-bottom:20px; border-collapse:collapse}
+.common_pop_contents .common_pop_form td input {margin:1px}
+.pop_gray_bg {margin:20px -40px 20px -43px; background:#e5e5e5; text-align:left; padding:20px 30px}
+.pop_gray_bg input[type="checkbox"] {margin:5px 5px 5px 30px}
+.normal_pop_body {position:relative; padding:20px 40px 40px 40px; background:#fff}
+.normal_pop_body .common_pop_contents {padding:0}
+.common_pop_bottom {min-width:355px; background:url('//img.tourtips.com/images/cm/common_pop_d_bottom_left.gif') no-repeat left bottom}
+.common_pop_bottom_content {position:relative; margin-left:3px; padding:20px 40px 40px 40px; background:url('//img.tourtips.com/images/cm/common_pop_d_bottom_right.gif') no-repeat right bottom; text-align:left}
+.common_pop_bottom_content .banner {display:block; margin:20px -30px -30px -33px; text-align:center}
+.common_pop_bottom_notice {font-size:12px}
+
+.pdfLayer_bullet {margin-top:7px; margin-right:55px; text-align:right}
+.pdfLayer_bullet li {display:inline-block; *display:inline; zoom:1; margin-left:5px; width:14px; height:15px; background:url('//img.tourtips.com/images/pc/main/pagenation.png') no-repeat left top; cursor:pointer}
+.pdfLayer_bullet li.selected {background-position:left bottom}
+.pdfLayer_print {position:absolute; top:28px; right:28px; padding-left:22px; border:none; background:url('//img.tourtips.com/images/pc/dest/print_icon.gif') no-repeat left center; color:#000; font-size:14px; font-weight:600; text-decoration:underline; cursor:pointer}
+
+.detail_pdflayer {position:absolute; bottom:45px; left:430px; z-index:10}
+
+/* spotSearchWrap */
+.spotSearchWrap{z-index:40;position:relative;width:200px;float:right;margin-top:-50px;}
+.spotSearchWrap .nd_input{display:block;width:163px;padding:10px 25px 10px 12px;border:none;border-bottom:1px solid #d6d6d6;box-shadow:none;border-radius:0;}
+.spotSearchWrap .nd_input:focus{box-shadow:none;border-bottom:1px solid #f37720;}
+.spotSearchWrap .nd_inpt_search{position:absolute;top:5px;right:0px;display:block;width:35px;height:35px;margin:0;padding:0;background:url('//img.tourtips.com/images/cm/spr_ico_common.png') 10px 10px no-repeat;}
+.spotSearchWrap .nd_center_autoCp{position:absolute;top:36px;left:0;display:none;width:198px;height:auto;padding:5px 0;background:#FFF;border:1px solid #898989;*zoom:1;}
+.spotSearchWrap .nd_center_autoCp:after{content:'';display:block;clear:both;}
+.spotSearchWrap .nd_center_autoCp li{position:relative;display:block;}
+.spotSearchWrap .nd_center_autoCp li:hover,
+.spotSearchWrap .nd_center_autoCp li.hover{background:#eee;}
+.spotSearchWrap .nd_center_autoCp li a{display:inline-block;width:110px;font-size:13px;color:#232323;padding:4px 0 0px 10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.spotSearchWrap .nd_center_autoCp li a em{color:#ff4f02;}
+.spotSearchWrap .nd_center_autoCp li span{position:absolute;top:3px;right:10px;font-size:12px;;}
+.spotSearchWrap .nd_center_autoCp.active{display:block;}
+
+/* nd_update_pop_wrap */
+.nd_update_pop_wrap {position:fixed; left:50%; top:50%; padding:30px; margin-left:-308px; margin-top:-204px; width:554px; border:1px solid #454545; background:#fff}
+.nd_update_close {position:absolute; top:20px; right:20px; display:inline-block; *display:inline; zoom:1; margin:0; width:24px; height:24px; background:url('//img.tourtips.com/images/pc/dest/btn_close_update.gif') no-repeat left top; border:0; cursor:pointer}
+.nd_update_title {margin:0; margin-bottom:15px; font-size:24px; color:#232323; font-weight:bold}
+.nd_update_comment {font-size:16px; line-height:24px; color:#232323}
+.nd_update_select {margin:0; margin-top:20px; padding:12px; width:554px; border:1px solid #d0d0d0; -webkit-appearance:none; background:#fff url('//img.tourtips.com/images/pc/dest/bg_update_select.gif') no-repeat right top; font-size:15px; color:#232323}
+.nd_update_text_wrap {position:relative; margin-top:10px}
+.nd_update_text_wrap label {position:absolute; top:15px; left:15px; font-size:15px; color:#999; line-height:24px; font-weight:normal}
+.nd_update_pop_wrap .nd_update_text {margin:0; padding:15px; width:522px; height:116px; border:1px solid #d0d0d0; background:#fff; -webkit-box-shadow:1px 1px 1px #f2f2f2 inset; -moz-box-shadow:1px 1px 1px #f2f2f2 inset; box-shadow:1px 1px 1px #f2f2f2 inset; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0; resize:none; font-size:15px; color:#999; line-height:24px; font-weight:normal}
+.nd_update_pop_wrap .nd_update_text:focus {margin:0; padding:15px; width:522px; height:116px; border:1px solid #d0d0d0; background:#fff; -webkit-box-shadow:1px 1px 1px #f2f2f2 inset; -moz-box-shadow:1px 1px 1px #f2f2f2 inset; box-shadow:1px 1px 1px #f2f2f2 inset; resize:none; font-size:15px; color:#999; line-height:24px; font-weight:normal}
+.nd_update_btn_wrap {margin-top:15px; text-align:center}
+
+/* recommend icon */
+.recommend_w18 {display:inline-block; *display:inline; zoom:1; width:18px; height:17px; margin-top:-5px; background:url('//img.tourtips.com/images/cm/ico/recommend_w18.png') no-repeat 0 0; vertical-align:middle}
+.recommend_w18:hover, .recommend_w18.on, .recommend_w18.active {background-position:0 -17px; cursor:pointer}
+.recommend_w24 {display:inline-block; *display:inline; zoom:1; width:24px; height:25px; margin-top:-8px; background:url('//img.tourtips.com/images/cm/ico/recommend_w24.png') no-repeat 0 0; vertical-align:middle}
+.recommend_w24:hover, .recommend_w24.on, .recommend_w24.active {background-position:0 -25px; cursor:pointer}
+
+/* Pagenation */
+.pagination{ margin:0}
+.basic{ margin:0}
+.pagination ul {
+    display:inline-block;
+    *display:inline;
+    margin-bottom:0;
+    margin-left:0;
+    -webkit-border-radius:4px;
+       -moz-border-radius:4px;
+            border-radius:4px;
+    *zoom:1;
+    -webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.05);
+       -moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.05);
+            box-shadow:0 1px 2px rgba(0, 0, 0, 0.05)}
+.pagination ul > li { display:inline; /*position:relative*/}
+.pagination ul > li > a,
+.pagination ul > li > p,
+.pagination ul > li > span {
+    float:left;
+    height:21px;
+    padding:6px 12px;
+    line-height:20px;
+    text-decoration:none;
+    background:url('//img.tourtips.com/images/cm/bg_pagenation.gif');
+    cursor:pointer;
+    color:#333;
+    font-size:13px;
+    border:1px solid #dbdbdb;
+    border-left-width:0}
+.pagination ul > li > a:hover,
+.pagination ul > .active > a,
+.pagination ul > .active > p,
+.pagination ul > .active > span { background-color:#fff}
+.pagination ul > .active > a,
+.pagination ul > .active > p,
+.pagination ul > .active > span { color:#ff6610;cursor:default; background:none}
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > p,
+.pagination ul > .disabled > p:hover
+.pagination ul > .disabled > a:hover { color:#ff6610; cursor:default; background:url('//img.tourtips.com/images/cm/bg_pagenation.gif')}
+.pagination ul > li:first-child > a,
+.pagination ul > li:first-child > p,
+.pagination ul > li:first-child > span {
+            border-left-width:1px;
+    -webkit-border-bottom-left-radius:4px;
+            border-bottom-left-radius:4px;
+    -webkit-border-top-left-radius:4px;
+            border-top-left-radius:4px;
+    -moz-border-radius-bottomleft:4px;
+    -moz-border-radius-topleft:4px}
+.pagination ul > li:last-child > a,
+.pagination ul > li:last-child > p,
+.pagination ul > li:last-child > span {-webkit-border-top-right-radius:4px;border-top-right-radius:4px;-webkit-border-bottom-right-radius:4px;border-bottom-right-radius:4px;-moz-border-radius-topright:4px;-moz-border-radius-bottomright:4px}
+.pagination-centered { text-align:center}
+
+/* paging */
+.paging{position:relative;height:45px;text-align:center;border:1px solid #e3e3e3;}
+.paging a{display:inline-block;width:32px;height:100%;line-height:42px;font-weight:bold;color:#232323;font-size:14px;font-family:"Tahoma";box-sizing:border-box;}
+.paging a:hover{background:#f3f3f3;}
+.paging a.on{color:#ff4f02;}
+.paging span{position:absolute;top:0;display:block;width:45px;height:100%;text-indent:-9999px;font:0/0 arial;cursor:pointer;border:1px solid #ececec;border-width:0 1px;background:url('//img.tourtips.com/images/cm/spr_ico_common.png') no-repeat;box-sizing:border-box;}
+.paging span a{display:block;width:100%;height:100%;}
+.paging span a:hover{background:none;}
+.paging span.goFirst{left:0;background-position:-314px -183px;border-left:none;}
+.paging span.goLast{right:0;background-position:-401px -183px;border-right:none;}
+.paging span.prev{left:45px;background-position:-343px -183px;border-left:none;}
+.paging span.next{right:45px;background-position:-369px -183px;border-right:none;}
+.paging.mb40{margin:0 0 40px;}
+
+/* ad_wide */
+#ad_wide{display:block;margin:0 0 40px;}
+
+/* adWrap */
+.lnb .adWrap{position:relative;margin-top:20px;}
+.lnb .adWrap a{display:block;width:200px;height:90px;}
+.lnb .adWrap img{position:absolute;top:0;left:0;width:100%;}
+
+/* goTop */
+.goTop{z-index:99999;position:fixed;bottom:40px;left:50%;display:block;width:30px;height:45px;font:0/0 arial;padding:0;margin-left:559px;outline:none;}
+.goTop span{position:relative;top:0;left:0;display:block;width:30px;height:45px;margin:0;}
+.goTop.beforeFoot{bottom:130px;}
+
+/* loading */
+.loading{display:none;z-index:9999999;position:fixed;top:0;left:0;width:100%;height:100%;text-align:center;overflow:hidden;}
+.loading .bg{z-index:0;position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;width:100%;height:100%;background:#000;opacity:0.7;filter:alpha(opacity=70);}
+.loading .pc{z-index:1;position:absolute;top:50%;left:50%;width:85px;height:85px;padding:10px;margin:-43px 0 0 -43px;background:#FFF;border-radius:20px;}
+.loading .pc img{width:85px;height:auto;}
+
+/* 스카이스캐너 관련 */
+.header-box__inner{min-height:0 !important;}
+.footer-box__inner .container{width:100%;}
+.item-flights .short-content .routes .route-box .airline-card .titles-box .subtitle{padding-bottom:2px;}
+.place-selector__cover, .place-selector__cover:link{line-height:40px;}
+@media \0screen {
+    .place-selector__input{display:block;height:53px !important;}
+}
+
+/* 호텔스컴바인 관련 */
+.hc_page_hotel #header{z-index:99 !important;}
+.hc_lang_ko, .hc_lang_ko .hc_f_i_smSm, .hc_lang_ko .hc_f_i_sm, .hc_lang_ko .hc_f_i_smLng, .hc_lang_ko .hc_f_i_med, .hc_lang_ko .hc_f_i_medLng, .hc_lang_ko .hc_f_i_lngSm, .hc_lang_ko .hc_f_i_lngMed, .hc_lang_ko .hc_f_i_lng, .hc_lang_ko .hc_f_s_smSm, .hc_lang_ko .hc_f_s_sm, .hc_lang_ko .hc_f_s_smLng, .hc_lang_ko .hc_f_s_med, .hc_lang_ko .hc_f_s_medLng, .hc_lang_ko .hc_f_s_lngSm, .hc_lang_ko .hc_f_s_lngMed, .hc_lang_ko .hc_f_s_lng, .hc_lang_ko #hc_bodyElements .ui-widget, .hc_lang_ko #hc_bodyElements .ui-widget input, .hc_lang_ko #hc_bodyElements .ui-widget select, .hc_lang_ko #hc_bodyElements .ui-widget textarea, .hc_lang_ko #hc_bodyElements .ui-widget button, .hc_lang_ko h1, .hc_lang_ko h2, .hc_lang_ko h3, .hc_lang_ko h4, .hc_lang_ko h5, .hc_lang_ko h6, .hc_lang_ko #hc_hotelPageSearch .hc_f_submit, .hc_lang_ko #hc_banner .hc_m_hd h2{font-family:"NanumBarunGothic" !important;}
+#hc_bc{*margin-top:-15px !important;}
+#hc_r_1{margin-bottom:30px;}
+.hc_i_layout_v6 .hc_i dd.hc_i_sentiments{padding:10px 0 !important;overflow:inherit !important;}
+#hc_sr_sort .hc_filter ul li a{color:#FFF;}
+.hc_lowAvail .hc_m_hd{margin-bottom:5px;}
+#hc_htl_pm_rates table th.hc_tbl_col3, #hc_htl_pm_rates table td.hc_tbl_col3{width:190px !important;}
+#hc_htl_pm_rates table td{line-height:120% !important;}
+#hc_htl_pm_rates table td.hc_tbl_col4{padding-left:0;padding-right:0;white-space:nowrap;}
+#hc_htl_pm_rates table td .hc_htl_pmi_flag{padding-left:0 !important;}
+.hc_i_layout_v16 .hc_i dd.hc_i_availability span,
+.hc_i_layout_v16 .hc_i dd.hc_i_availability p{line-height:120% !important;}
+.hc_i_layout_v6 dd.hc_i_pm tr.hc_sri_pm_direct td.hc_tbl_col_2 a,
+.hc_i_layout_v6 dd.hc_i_pm tr.hc_sri_pm_direct.hc_highlight td.hc_tbl_col_2 a{padding:3px 0;}
+.hc_i_layout_v6 dd.hc_i_pm tr.hc_sri_pm_direct td.hc_tbl_col_2 a{text-align:center;}
+.hc_i_layout_v6 dd.hc_i_pm tr.hc_sri_pm_direct td.hc_tbl_col_2 span{display:block;margin:0 0 5px;}
+.hc_settings{top:8px;}
+
+/* 출력관련 */
+@media print {
+    .mw,
+    #header,
+    #footer,
+    .pageDesc,
+    .lnb,
+    .new_des_share_list,
+    .editorArea,
+    .recommandSpot,
+    #review_area,
+    .snsArea,
+    #fb-root,
+    .fb-like.fb_iframe_widget,
+    .newCount,
+    #facebook,
+    .updateArea{display:none;}
+    #subWrap .contents{border:none;width:100%;}
+}
+
+/* print_page */
+#print_page{display:none;}
+
+/* 2nd style (2015.07 ~ ) */
+/* goLink */
+.goLinkWrap{overflow:hidden;}
+.goLink{height:141px;margin:0 0 40px;}
+.goLink li{position:relative;float:left;display:inline-block;width:362px;height:139px;margin-left:-1px;border:1px solid #e3e3e3;}
+.goLink li:first-child{margin-left:0;}
+.goLink li a{display:block;}
+.goLink li a:hover p{text-decoration:underline;}
+.goLink p{font-size:18px;color:#232323;line-height:24px;margin:33px 0 0 120px;}
+.goLink p span{display:block;font-size:14px;}
+.goLink i{position:absolute;bottom:10px;right:10px;font-style:normal;color:#898989;}
+.goLink a:hover i{color:#FF4F02;text-decoration:underline;}
+.goLink .freeHotel{background:url('//img.tourtips.com/images/pc/hotel/ico_freeHotel.png') 20px center no-repeat;}
+.goLink .prize{background:url('//img.tourtips.com/images/pc/hotel/ico_prize.png') 20px center no-repeat;}
+.goLink .allFree{background:url('//img.tourtips.com/images/pc/hotel/ico_allFree.png') 20px center no-repeat;}
+.goLink .freeAir{background:url('//img.tourtips.com/images/pc/hotel/ico_freeHotel_v2.png') 20px center no-repeat;}
+
+/* warningArea */
+.warningArea{margin:0 0 40px;}
+.warningArea h3{display:block;font:normal 18px/18px "NanumBarunGothicBold";color:#232323;margin:0 0 13px;}
+.warningArea .warningBox{padding:30px;padding-bottom:15px;background:#f7f7f7;border:1px solid #e3e3e3;}
+.warningArea .warningBox ul{display:block;}
+.warningArea .warningBox ul:after{content:'';display:block;clear:both;}
+.warningArea .warningBox li{display:block;font-size:14px;color:#666;margin:0 0 12px;}
+.warningArea .warningBox li a{width:136px;height:27px;text-align:center;font:normal 12px/29px "NanumBarunGothicBold";color:#232323;padding:0;margin-left:7px;}
+.warningArea .warningBox .last{margin-top:-7px;}
+
+/* realReview */
+.realReview{position:relative;margin:0 0 20px;overflow:hidden;}
+.realReview h3{display:block;font:normal 18px/18px "NanumBarunGothicBold";color:#232323;margin:0 0 13px;}
+.realReview ul{display:block;width:1200px;overflow:hidden;}
+.realReview ul:after{content:'';display:block;clear:both;}
+.realReview li{position:relative;float:left;display:inline-block;width:256px;height:256px;margin:0 22px 22px 0;}
+.realReview li a:hover .user{text-decoration:underline;}
+.realReview .thumb{z-index:1;position:relative;display:block;width:100%;height:100%;overflow:hidden;}
+.realReview .thumb img{z-index:1;position:relative;min-width:256px;min-height:256px;}
+.realReview .cover{z-index:2;position:absolute;top:0;left:0;display:block;width:100%;height:100%;background:url('//img.tourtips.com/images/pc/hotel/cover_realReview.png') repeat-x;}
+.realReview .profileImg{z-index:3;position:absolute;bottom:68px;left:20px;display:block;width:34px;height:34px;border-radius:30px;overflow:hidden;}
+.realReview .profileImg img{width:34px;height:34px;}
+.realReview .user{z-index:3;position:absolute;top:193px;left:20px;display:block;color:#FFF;font-size:18px;line-height:24px;margin-right:20px;}
+.realReview .user i{font-style:normal;}
+.realReview .viewOption{position:relative;display:block;width:100%;height:41px;text-align:center;line-height:41px;margin:0;background:#FFF;border:1px solid #e3e3e3;}
+.realReview .viewOption:hover{border-color:#c1c1c1;}
+.realReview .viewOption span{position:absolute;top:0;left:0;display:block;width:100%;height:100%;}
+.realReview .viewOption span em{font-size:14px;color:#232323;padding-left:20px;background:url('//img.tourtips.com/images/pc/hotel/spr_viewOption.png') 0 4px no-repeat;}
+.realReview .viewOption.open em{background-position:0 -39px;}
+
+/* partnershipBox */
+.partnershipBox{position:relative;padding:40px 0;margin:0 0 40px;border:1px solid #e3e3e3;}
+.partnershipBox:after{content:'';display:block;clear:both;}
+.partnershipBox p{display:block;font-size:18px;color:#232323;margin:0 0 30px 20px;}
+.partnershipBox p strong{display:block;height:22px;font-weight:normal;font-size:22px;font-family:"NanumBarunGothicBold";margin-top:15px;*padding:5px 0;}
+.partnershipBox p a{position:absolute;top:40px;right:20px;display:block;width:190px;height:33px;line-height:33px;font-size:15px;text-align:center;color:#FFF;font-family:"NanumBarunGothicBold";background:#2f2f2f;border:1px solid #1a1a1a;}
+.partnershipBox ul{display:block;*height:176px;}
+.partnershipBox ul:after{content:'';display:block;clear:both;}
+.partnershipBox li{float:left;display:inline-block;width:270px;font:normal 18px/24px "NanumBarunGothic";text-align:center;color:#232323;border-left:1px solid #ececec;}
+.partnershipBox li:first-child{border-left:none;}
+.partnershipBox li img{display:block;margin:0 auto 18px auto;}
+
+/* orangeTab */
+.orangeTab{position:relative;height:46px;margin:0 0 30px;border-bottom:2px solid #f37720;}
+.orangeTab ul{display:block;height:100%;margin-right:210px;}
+.orangeTab li{float:left;display:inline-block;width:440px;height:45px;border-top:1px solid #e3e3e3;}
+.orangeTab li:first-child{width:439px;border-left:1px solid #e3e3e3;}
+.orangeTab a{display:block;width:100%;height:100%;text-align:center;font-family:"NanumBarunGothicBold";font-size:17px;line-height:46px;color:#232323;}
+.orangeTab li.on{height:46px;background:#f37720;border:none;}
+.orangeTab li.on a{color:#FFF;}
+.orangeTab li:first-child.on{border-left:none;}
+.orangeTab .goEvent{position:absolute;top:0;right:0;display:block;width:210px;height:48px;line-height:48px;color:#FFF;background:#2f2f2f;}
+.orangeTab .goEvent span{padding-right:19px;background:url('//img.tourtips.com/images/pc/hotel/angle_goEvent.png') right center no-repeat;}
+
+/* dimmedLayer */
+.dimmedLayer{display:none;z-index:100000;position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;}
+.dimmedLayer .dimmed{z-index:1;position:absolute;top:0;left:0;width:100%;height:100%;background:#000;opacity:0.5;filter:alpha(opacity=50);}
+.dimmedLayer .layerWrap{display:none;z-index:2;position:fixed;top:50%;left:50%;width:540px;padding:49px 30px;padding-bottom:30px;margin-left:-300px;background:#FFF;}
+.dimmedLayer .layerWrap#complete{padding-bottom:68px;}
+#wrap .dimmedLayer .layerWrap h2{clear:both;display:block;height:16px;font:normal 16px/16px "NanumBarunGothicBold";margin:0 0 34px;}
+.dimmedLayer .layerWrap .mainTxt{text-align:center;font-size:22px;color:#232323;padding:0 0 20px;margin:0 0 20px;border-bottom:3px solid #f37720;}
+.dimmedLayer .layerWrap .mainTxt strong{display:block;height:28px;font:normal 28px/28px "NanumBarunGothicBold";margin:0 0 15px;}
+.dimmedLayer .layerWrap .mainTxt p em{color:#ff4f02;}
+.dimmedLayer .layerWrap .mainTxt.type2{text-align:left;}
+.dimmedLayer .layerWrap .mainTxt.type2 p{font-size:15px;line-height:24px;}
+.dimmedLayer .layerWrap .myStatus{text-align:center;font-size:16px;color:#232323;padding:20px;margin:0 0 20px;background:#f7f7f7;border:1px solid #e3e3e3;}
+.dimmedLayer .layerWrap .myStatus em{color:#ff4f03;}
+.dimmedLayer .layerWrap .myStatus strong{font-weight:normal;color:#ff4f03;font-family:"NanumBarunGothicBold";}
+.dimmedLayer .layerWrap .sTxt{text-align:center;color:#232323;font-size:15px;margin:0 0 20px;}
+.dimmedLayer .layerWrap .sTxt span{color:#ff4f03;}
+.dimmedLayer .layerWrap .btnWrap{text-align:center;}
+.dimmedLayer .layerWrap .btnWrap a{height:32px;font-family:"NanumBarunGothicBold";line-height:32px;padding:0 20px;margin:0 0 0 3px;white-space:nowrap;}
+.dimmedLayer .layerWrap .btnWrap a:first-child{margin-left:0;}
+.dimmedLayer .layerWrap .btnWrap a.btn.closeLayer{position:inherit;display:inline-block;width:auto;*position:relative;}
+.dimmedLayer .layerWrap .bottom{position:absolute;bottom:0;left:0;width:100%;height:47px;background:#f7f7f7;border-top:1px solid #ececec;vertical-align:middle;}
+.dimmedLayer .layerWrap .bottom p{display:inline-block;font-size:13px;color:#666;margin:0 0 0 30px;}
+.dimmedLayer .layerWrap .bottom a{float:right;display:inline-block;width:113px;height:27px;text-align:center;font:normal 12px/27px "NanumBarunGothicBold";color:#232323;vertical-align:middle;margin:9px 9px 0 0;border:1px solid #c1c1c1;}
+.dimmedLayer .layerWrap .bottom .vBlank{display:inline-block;width:0;height:100%;vertical-align:middle;}
+.dimmedLayer .layerWrap .couponflow{position:relative;margin:23px 0 30px 0;border-right:1px solid #c1c1c1;}
+.dimmedLayer .layerWrap .couponflow ul{display:block;}
+.dimmedLayer .layerWrap .couponflow ul:after{content:'';display:block;clear:both;}
+.dimmedLayer .layerWrap .couponflow li{position:relative;float:left;display:inline-block;width:130px;height:78px;font-size:13px;color:#666;line-height:17px;vertical-align:middle;padding:0 0 0 50px;border:1px solid #c1c1c1;border-width:1px 0;background:#f7f7f7 url('//img.tourtips.com/images/pc/hotel/bg_couponflow.gif') no-repeat;}
+.dimmedLayer .layerWrap .couponflow li:first-child{width:138px;padding-left:40px;background:#f7f7f7;border-left:1px solid #c1c1c1;}
+.dimmedLayer .layerWrap .couponflow li .txt{display:inline-block;vertical-align:middle;}
+.dimmedLayer .layerWrap .couponflow li .topTxt{position:absolute;top:-18px;left:-1px;width:360px;height:16px;color:#ff4f02;font-size:13px;text-align:center;border:1px solid #f37720;border-bottom:0;}
+.dimmedLayer .layerWrap .couponflow li .topTxt span{position:relative;top:-8px;display:inline-block;padding:0 9px;background:#FFF;}
+.dimmedLayer .layerWrap .couponflow li:first-child .topTxt{left:-1px;width:177px;}
+.dimmedLayer .layerWrap .couponflow li .vBlank{display:inline-block;width:0;height:100%;vertical-align:middle;}
+.dimmedLayer .layerWrap .couponflow li .angle{position:absolute;top:0;right:-26px;display:block;width:27px;height:78px;background:url('//img.tourtips.com/images/pc/hotel/bg_couponflow.png') no-repeat;}
+.dimmedLayer .layerWrap .couponflow .btnGroupR{position:absolute;top:-59px;right:0;text-align:right;}
+.dimmedLayer .layerWrap .couponflow a{display:inline-block;width:113px;height:27px;text-align:center;font:normal 12px/27px "NanumBarunGothicBold";color:#232323;border:1px solid #c1c1c1;}
+.dimmedLayer .layerWrap .couponflow.type2{border-right:none;}
+.dimmedLayer .layerWrap .couponflow.type2 li{width:auto;padding-left:23px;padding-right:54px;border-right:1px solid #c1c1c1;background-position:right 0;background:#f7f7f7;}
+.dimmedLayer .layerWrap .couponflow.type2 li:first-child{width:auto;border-right:none;background:#f7f7f7 url('//img.tourtips.com/images/pc/hotel/bg_couponflow.png') right 0 no-repeat;}
+.dimmedLayer .layerWrap .couponflow.type2 li:first-child .topTxt{width:359px;}
+.dimmedLayer .layerWrap#noIssuance01 .couponflow,
+.dimmedLayer .layerWrap#noIssuance02 .couponflow{margin-bottom:20px;}
+.dimmedLayer .layerWrap .closeLayer{position:absolute;top:20px;right:20px;display:block;width:25px;height:25px;}
+.dimmedLayer .layerWrap .closeLayer span{position:relative;top:0;left:0;display:block;width:100%;height:100%;font:0/0 arial;text-indent:-9999px;background:url('//img.tourtips.com/images/pc/hotel/btn_closeLayer.gif') no-repeat;}
+.dimmedLayer .layerWrap .warning{color:#ff4f02;font-size:13px;margin:0 0 25px;}
+.dimmedLayer .layerWrap .warning p{font:normal 18px/18px "NanumBarunGothicBold";margin:0 0 8px;}
+.dimmedLayer .layerWrap .warning ol{line-height:20px;}
+.dimmedLayer .layerWrap .orangeTxt{display:block;height:18px;line-height:18px;text-align:center;font-size:18px;color:#ff4f02;margin:0 0 20px;}
+.dimmedLayer .layerWrap .winners{background:#f7f7f7;border:1px solid #e3e3e3;padding:20px 0 20px 150px;margin:0 0 30px;}
+.dimmedLayer .layerWrap .winners ol{display:block;line-height:25px;}
+.dimmedLayer .layerWrap .winners ol:after{content:'';display:block;clear:both;}
+.dimmedLayer .layerWrap .winners li{color:#232323;font-size:16px;}
+.dimmedLayer .layerWrap .winners li strong{font:normal 16px/16px "NanumBarunGothicBold";margin-right:7px;}
+.dimmedLayer .layerWrap .winners li em{color:#ff4f03;}
+.dimmedLayer .layerWrap .winnersTxt{font-size:13px;line-height:20px;color:#666;}
+.dimmedLayer .layerWrap .winnersTxt strong{display:block;font:normal 18px/18px "NanumBarunGothicBold";margin:0 0 10px;color:#ff4f02;}
+.dimmedLayer .layerWrap .winnersTxt a{clear:both;width:auto;height:27px;font:normal 12px/27px "NanumBarunGothicBold";padding:0 13px;margin:5px 0 20px 0;}
+.dimmedLayer .layerWrap .mainTit{text-align:left;margin:0 0 22px 14px;}
+.dimmedLayer .layerWrap .mainTit2{text-align:center;margin:0 0 22px;}
+.dimmedLayer .layerWrap .standardTxt{display:block;font-size:14px;color:#666;line-height:130%;text-align:center;margin:0 0 8px;}
+.dimmedLayer .layerWrap .standardTxt u{color:#ff6610;}
+.dimmedLayer .layerWrap .smallTxt{display:block;text-align:center;font-size:12px;color:#666;margin:0 0 25px;}
+.dimmedLayer .layerWrap .stepFlow{position:relative;left:-30px;width:700px;height:155px;display:block;background:#888;}
+.dimmedLayer .layerWrap .stepFlow:after{content:'';display:block;clear:both;}
+.dimmedLayer .layerWrap .stepFlow li{float:left;display:inline-block;height:155px;color:#FFF;padding-left:30px;}
+.dimmedLayer .layerWrap .stepFlow strong{display:block;font:normal 24px/24px "NanumBarunGothicBold";margin:25px 0 10px 0;}
+.dimmedLayer .layerWrap .stepFlow p{display:block;font-size:14px;line-height:18px;margin:0 0 5px;}
+.dimmedLayer .layerWrap .stepFlow p a{color:#fff000;}
+.dimmedLayer .layerWrap .stepFlow span{font-size:12px;line-height:14px;color:#fff000;}
+.dimmedLayer .layerWrap .stepFlow .step1{width:169px;}
+.dimmedLayer .layerWrap .stepFlow .step2{width:205px;padding-left:65px;background:url('//img.tourtips.com/images/pc/air/bg_layerpopup_flow.png') no-repeat;}
+.dimmedLayer #taxes.layerWrap{width:640px;margin-left:-350px;padding-bottom:10px;}
+.dimmedLayerOpen{display:none;z-index:100000;position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;}
+.dimmedLayerOpen .dimmed{z-index:1;position:absolute;top:0;left:0;width:100%;height:100%;background:#000;opacity:0.5;filter:alpha(opacity=50);}
+#wrap .dimmedLayerOpen .layerWrap h2{clear:both;display:block;height:16px;font:normal 16px/16px "NanumBarunGothicBold";margin:0 0 34px;}
+.dimmedLayerOpen .layerWrap .mainTxt{text-align:center;font-size:22px;color:#232323;padding:0 0 20px;margin:0 0 20px;border-bottom:3px solid #f37720;}
+.dimmedLayerOpen .layerWrap{display:none;z-index:2;position:fixed;top:50%;left:50%;width:540px;padding:49px 30px;padding-bottom:30px;margin-left:-300px;background:#FFF;}
+.dimmedLayerOpen #openEditorIntWrap{z-index:2;position:fixed;top:50%;left:50%;width:441px;height:329px;margin:-204px 0 0 -220px;background:#FFF;}
+.dimmedLayerOpen .openEditorIntWrap .mainTxt{font:normal 28px/36px "NanumBarunGothicBold";color:#232323;letter-spacing:-1px;margin-top:-4px;padding-bottom:19px;}
+.dimmedLayerOpen .openEditorIntWrap p{display:block;font-size:16px;color:#232323;line-height:25px;margin:0 0 24px;}
+.dimmedLayerOpen .openEditorIntWrap .mainTxt em,
+.dimmedLayerOpen .openEditorIntWrap p em{color:#ff4f02;}
+.dimmedLayerOpen .openEditorIntWrap a{position:relative;display:block;height:42px;font-size:15px;line-height:42px;text-align:center;color:#FFF;background:#3c5a98;border:1px solid #354f85;}
+.dimmedLayerOpen .openEditorIntWrap a i{position:absolute;top:-1px;left:-1px;width:49px;height:44px;background:url('//img.tourtips.com/images/pc/mypage/img_logo_facebook.gif') no-repeat;}
+.dimmedLayerOpen .layerWrap .closeLayerOpen{position:absolute;top:20px;right:20px;display:block;width:25px;height:25px;}
+.dimmedLayerOpen .layerWrap .closeLayerOpen span{position:relative;top:0;left:0;display:block;width:100%;height:100%;font:0/0 arial;text-indent:-9999px;background:url('//img.tourtips.com/images/pc/hotel/btn_closeLayer.gif') no-repeat;}
+
+/* searchNotice */
+.searchNotice{z-index:4;position:relative;padding:19px 30px;margin:0 0 22px;border:1px solid #e3e3e3;}
+.searchNotice:after{content:'';display:block;clear:both;}
+.searchNotice .selectBox{position:relative;float:left;display:inline-block;width:116px;height:31px;margin-right:11px;border-bottom:1px solid #d6d6d6;}
+.searchNotice .selectBox .cur{position:relative;display:block;height:31px;line-height:32px;font-size:14px;color:#232323;text-indent:10px;cursor:pointer;}
+.searchNotice .selectBox .cur .ico{position:absolute;right:10px;top:50%;display:inline-block;width:10px;height:6px;vertical-align:middle;margin-top:-3px;background:url('//img.tourtips.com/images/cm/spr_ico_common.png') 0 -70px no-repeat;}
+.searchNotice .selectBox ul{display:none;background:#FFF;border:1px solid #898989;}
+.searchNotice .selectBox li{display:block;clear:both;font-size:14px;color:#232323;cursor:pointer;padding:5px 10px;}
+.searchNotice .selectBox li:hover,
+.searchNotice .selectBox li.on{background:#eee;}
+.searchNotice .searchWord{position:relative;float:left;display:inline-block;width:300px;height:31px;border-bottom:1px solid #d6d6d6;}
+.searchNotice .searchWord input{width:246px;height:16px;padding:7px 10px 8px 10px;border-radius:0;box-shadow:none;border:none;}
+.searchNotice .searchWord button{position:absolute;top:0;right:0;display:block;width:34px;height:34px;font:0/0 arial;padding:0;margin:0;background:url('//img.tourtips.com/images/cm/spr_ico_common.png') 10px 10px no-repeat;}
+.searchNotice .searchWord button span{position:absolute;top:0;left:0;display:block;width:0;height:0;font:0/0 arial;letter-spacing:0;overflow:hidden;visibility:hidden;}
+.searchNotice .selectBox.active ul{display:block;}
+.searchNotice .selectBox.active .cur .ico{background:url('//img.tourtips.com/images/cm/spr_ico_common.png') -100px -70px no-repeat;}
+.searchNotice .btn.orange{position:absolute;top:50%;right:30px;width:138px;height:30px;font:normal 15px/31px "NanumBarunGothicBold";text-align:center;padding:0;margin-top:-16px;}
+
+/* sortingBox */
+.sortingBox{position:relative;float:right;display:inline-block;width:116px;height:27px;margin:0 0 10px;border:1px solid #c1c1c1;}
+.sortingBox .cur{position:relative;display:block;width:107px;height:27px;font-size:12px;color:#232323;line-height:28px;cursor:pointer;padding:0 0 0 9px;}
+.sortingBox .cur .ico{position:absolute;top:50%;right:10px;display:inline-block;width:10px;height:6px;vertical-align:middle;margin-top:-4px;background:url('//img.tourtips.com/images/cm/spr_ico_common.png') 0 -70px no-repeat;}
+.sortingBox ul{display:none;position:absolute;left:-1px;top:27px;width:116px;background:#FFF;border:1px solid #898989;}
+.sortingBox ul:after{content:'';display:block;clear:both;}
+.sortingBox li{clear:both;display:block;}
+.sortingBox li a{display:block;font-size:12px;color:#232323;padding:5px 10px;}
+.sortingBox li a:hover{background:#eee;}
+.sortingBox.active ul{display:block;}
+.sortingBox.active .cur .ico{background-position:-100px -70px;}
+
+/* noticeListWrap */
+.noticeListWrap{position:relative;}
+.noticeListWrap table{clear:both;table-layout:fixed;width:100%;}
+.noticeListWrap table th,
+.noticeListWrap table td{text-align:left;}
+.noticeListWrap table th{height:40px;font-size:13px;color:#232323;font-weight:normal;text-align:center;vertical-align:middle;border:1px solid #ddd;border-width:1px 0;}
+.noticeListWrap table td{color:#232323;padding:12px 10px 11px 10px;border-bottom:1px solid #ececec;}
+.noticeListWrap table th .sorting{cursor:pointer;padding-right:9px;background:url('//img.tourtips.com/images/cm/ico/arrow_sorting.gif') right center no-repeat;}
+.noticeListWrap table th .sorting.reverse{background:url('//img.tourtips.com/images/cm/ico/arrow_sorting_reverse.gif') right center no-repeat;}
+.noticeListWrap table tr:first-child th,
+.noticeListWrap table tr:first-child td{border-top:1px solid #ddd;}
+.noticeListWrap table .num{color:#777;font-size:12px;text-align:center;}
+.noticeListWrap table a{line-height:22px;word-wrap:break-word;}
+.noticeListWrap table a:hover{text-decoration:underline;}
+.noticeListWrap table .notice td{background:#fffee4;}
+.noticeListWrap table .notiImg{vertical-align:middle;}
+.noticeListWrap table .writer{font-size:12px;color:#777;}
+.noticeListWrap table .reply{color:#ff4f02;font-size:13px;}
+.noticeListWrap table .mrgnLeft9{padding-left:190px;}
+.noticeListWrap table .icoGroup{display:inline-block;height:12px;letter-spacing:0;font:0/0 arial;vertical-align:middle;}
+.noticeListWrap table .icoGroup i:first-child{margin-left:3px;}
+.noticeListWrap table i.ico{display:inline-block;text-indent:-9999em;font:0/0 arial;letter-spacing:0;vertical-align:middle;margin-right:5px;background:url('//img.tourtips.com/images/cm/ico/spr_community.png') no-repeat;}
+.noticeListWrap table i.ico.noti{width:14px;height:16px;background-position:0 0;}
+.noticeListWrap table i.ico.photo{width:16px;height:12px;background-position:-14px 0;}
+.noticeListWrap table i.ico.attach{width:11px;height:12px;background-position:-30px 0;}
+.noticeListWrap table i.ico.new{width:13px;height:13px;background-position:-41px 0;}
+.noticeListWrap table i.ico.mobile{float:left;width:18px;height:24px;vertical-align:top;margin-right:7px;background-position:-54px 0;}
+.noticeListWrap table i.ico.tourtips{width:16px;height:15px;margin-right:4px;background-position:0 -16px;}
+.noticeListWrap table i.ico.editor{float:left;width:15px;height:19px;margin-right:5px;background-position:-16px -16px;}
+.noticeListWrap table span.re{float:left;display:inline-block;width:12px;height:24px;vertical-align:top;margin:0 5px 0 10px;background:url('//img.tourtips.com/images/pc/qna/ico_reply.png') 0 0 no-repeat;}
+.noticeListWrap table span.reDel{color:#ff4f02;}
+.noticeListWrap table .mrgnLeft1{padding-left:30px;}
+.noticeListWrap table .mrgnLeft2{padding-left:50px;}
+.noticeListWrap table .mrgnLeft3{padding-left:70px;}
+.noticeListWrap table .mrgnLeft4{padding-left:90px;}
+.noticeListWrap table .mrgnLeft5{padding-left:110px;}
+.noticeListWrap table .mrgnLeft6{padding-left:130px;}
+.noticeListWrap table .mrgnLeft7{padding-left:150px;}
+.noticeListWrap table .mrgnLeft8{padding-left:170px;}
+.noticeListWrap table .mrgnLeft9{padding-left:190px;}
+.noticeListWrap table .mrgnLeft10{padding-left:210px;}
+.noticeListWrap.main{margin:0 0 42px;}
+.noticeListWrap.main table{border-bottom:1px solid #ddd;}
+.noticeListWrap .more{position:absolute;top:-24px;right:0;font-size:12px;color:#898989;}
+.noticeListWrap .optionBox{position:relative;text-align:right;}
+.noticeListWrap .optionBox .cur{white-space:nowrap;text-align:left;}
+.noticeListWrap .optionBox .cur .ico{display:inline-block;width:20px;height:17px;margin-left:7px;cursor:pointer;background:url('//img.tourtips.com/images/cm/spr_ico_common.png') 5px -65px no-repeat;border:1px solid #c1c1c1;}
+.noticeListWrap .optionBox .cur span{display:inline-block;width:auto;text-align:left;text-indent:11px;vertical-align:middle;}
+.noticeListWrap .optionBox ul{display:none;z-index:2;position:absolute;left:50%;width:100%;max-height:255px;padding:5px 0;margin-left:-61px;background:#FFF;border:1px solid #898989;overflow-y:auto;}
+.noticeListWrap .optionBox ul:after{content:'';display:block;clear:both;}
+.noticeListWrap .optionBox li{display:block;clear:both;}
+.noticeListWrap .optionBox li a{display:block;font-size:14px;color:#232323;text-align:left;padding:2px 9px;}
+.noticeListWrap .optionBox li a:hover{text-decoration:none;background:#eee;}
+.noticeListWrap .optionBox.active ul{display:block;width:122px;}
+.noticeListWrap .optionBox.active .cur .ico{background-position:-95px -65px;}
+.noticeListWrap .optionBox2{position:relative;text-align:right;}
+.noticeListWrap .optionBox2 .cur{text-align:center;}
+.noticeListWrap .optionBox2 .cur .ico{display:inline-block;width:20px;height:17px;margin-left:7px;cursor:pointer;background:url('//img.tourtips.com/images/cm/spr_ico_common.png') 5px -65px no-repeat;border:1px solid #c1c1c1;}
+.noticeListWrap .optionBox2 .cur span{display:inline-block;width:35px;text-align:left;text-indent:11px;vertical-align:middle;}
+.noticeListWrap .optionBox2 ul{display:none;position:absolute;width:100px;padding:5px 0;background:#FFF;border:1px solid #898989;}
+.noticeListWrap .optionBox2 li{display:block;clear:both;}
+.noticeListWrap .optionBox2 li a{display:block;text-indent:9px;font-size:14px;color:#232323;text-align:left;padding:2px 0;}
+.noticeListWrap .optionBox2 li a:hover{text-decoration:none;background:#eee;}
+.noticeListWrap .optionBox2.active ul{display:block;}
+.noticeListWrap .optionBox2.active .cur .ico{background-position:-95px -65px;}
+.noticeListWrap .paging{margin-top:-1px;}
+
+/* writeWrap */
+.writeWrap{margin:0 0 10px;}
+.writeWrap table{table-layout:fixed;width:100%;border:1px solid #ddd;}
+.writeWrap table th,
+.writeWrap table td{border:1px solid #e3e3e3;}
+.writeWrap table th{text-align:center;font-size:14px;font-weight:normal;color:#232323;border-right:1px solid #ddd;}
+.writeWrap table td{padding:10px;}
+.writeWrap table input{background:#FFF;border-radius:0;box-shadow:none;}
+.writeWrap .byHead{position:relative;display:inline-block;height:32px;border:1px solid #c1c1c1;}
+.writeWrap .byHead .cur{position:relative;width:110px;height:32px;color:#232323;line-height:33px;cursor:pointer;padding:0 20px 0 10px;}
+.writeWrap .byHead .cur i.ico{position:absolute;top:50%;right:10px;display:inline-block;width:10px;height:6px;vertical-align:middle;margin-top:-4px;background:url('//img.tourtips.com/images/cm/spr_arrow.png') 0 0 no-repeat;}
+.writeWrap .byHead ul{z-index:2;display:none;position:absolute;top:32px;left:-1px;width:140px;padding:5px 0;background:#FFF;border:1px solid #898989;}
+.writeWrap .byHead li{display:block;text-indent:9px;font-size:14px;color:#232323;cursor:pointer;padding:5px 0;}
+.writeWrap .byHead li:hover{background:#eee;}
+.writeWrap .byHead.active ul{display:block;max-height:260px;overflow-y:auto;}
+.writeWrap .byHead.active .cur i.ico{background-position:0 -54px;}
+.writeWrap .title{display:block;width:666px;font-size:14px;color:#232323;padding:8px;}
+.writeWrap .smartEditor{padding:0;background:#F6F6F6;}
+.writeWrap .smartEditor iframe{background:#FFF;}
+.writeWrap .smartEditor .smartEditorWrap{width:100%;}
+.writeWrap .smartEditor .smartEditorWrap iframe{width:100%;height:277px;}
+.writeWrap .smartEditor .smartEditorWrap iframe body{margin:0;}
+
+/* file_input_hidden */
+.file_input_hidden{cursor:pointer;}
+.file_input_hidden::-webkit-file-upload-button{cursor:pointer;}
+
+/* attachList */
+.attachList{float:left;display:inline-block;width:681px;min-height:32px;font-size:13px;margin-right:10px;border:1px solid #d6d6d6;}
+.attachList p.noAttach{display:block;margin:9px 8px 0 14px;}
+.attachList p.noAttach em{color:#232323;}
+.attachList.hasFile{height:34px;border-top:none;background:#f3f3f3;margin-top:-1px;}
+.attachList.hasFile p.noAttach{margin-top:11px;}
+.attachList ul{display:block;margin:8px 14px 0 14px;}
+.attachList li{display:block;clear:both;vertical-align:middle;margin-bottom:9px;}
+.attachList li:first-child{margin-top:0;}
+.attachList li p{display:inline-block;font-size:13px;color:#232323;vertical-align:middle;margin-right:6px;}
+.attachList li p .ico{display:inline-block;width:7px;height:11px;margin-right:6px;vertical-align:top;background:url('//img.tourtips.com/images/cm/ico/spr_community.png') -41px -35px no-repeat;}
+.attachList li span{display:inline-block;color:#999;font-size:12px;vertical-align:middle;margin-right:7px;}
+.attachList li button{position:relative;top:-2px;display:inline-block;width:16px;height:16px;font:0/0 arial;text-indent:-9999px;vertical-align:middle;padding:0;margin:0;background:url('//img.tourtips.com/images/cm/ico/spr_community.png') -48px -35px no-repeat;}
+
+/* hashTags */
+.hashTags{font:0/0 arial;letter-spacing:0;}
+.hashTags a,
+.hashTags span{font:normal 13px "NanumBarunGothic";color:#777;margin-right:7px;}
+.hashTags a:hover{text-decoration:underline;}
+
+/* viewArea */
+.viewArea{z-index:2;position:relative;margin-top:-45px;}
+.viewArea .viewBtn{margin:0 0 10px;}
+.viewArea .viewBtn:after{content:'';display:block;clear:both;}
+.viewArea .viewBtn .btn{height:30px;font:normal 13px/31px "NanumBarunGothicBold";padding:0 20px;margin-left:2px;}
+.viewArea .viewBtn .btn:first-child{margin-left:0;}
+.viewArea .viewBtn .leftArea{float:left;display:inline-block;text-align:left;}
+.viewArea .viewBtn .rightArea{float:right;display:inline-block;text-align:right;}
+.viewArea .viewBtn .goQuestion{width:138px;text-align:center;padding:0;}
+.viewArea .viewHead{position:relative;min-height:46px;padding:20px;padding-bottom:15px;border:1px solid #ddd;border-bottom:none;}
+.viewArea .viewHead .profileImg{float:left;display:inline-block;width:46px;height:46px;border-radius:46px;margin-right:20px;overflow:hidden;}
+.viewArea .viewHead .profileImg img{width:46px;}
+.viewArea .viewHead .titleArea{display:inline-block;width:600px;vertical-align:middle;}
+.viewArea .viewHead .titleArea .category{position:relative;top:2px;display:inline;font-weight:normal;font-size:16px;line-height:16px;color:#232323;vertical-align:middle;padding-left:0;margin-top:0;}
+.viewArea .viewHead .titleArea .title{display:inline;height:auto;min-height:16px;font-weight:normal;font-size:16px;line-height:19px;color:#232323;vertical-align:middle;margin:0 0 10px;}
+.viewArea .viewHead .titleArea a,
+.viewArea .viewHead .titleArea span{float:left;display:inline-block;height:19px;color:#777;font-size:12px;line-height:17px;vertical-align:middle;padding-left:7px;margin-top:10px;margin-right:7px;}
+.viewArea .viewHead .titleArea span i{font-style:normal;}
+.viewArea .viewHead .titleArea a{line-height:15px;}
+.viewArea .viewHead .titleArea a:hover{text-decoration:underline;}
+.viewArea .viewHead .titleArea .user{clear:both;color:#232323;background:none;padding:0;margin-top:10px;}
+.viewArea .viewHead .titleArea .user:hover{text-decoration:underline;cursor:pointer;}
+.viewArea .viewHead .titleArea .date,
+.viewArea .viewHead .titleArea .count,
+.viewArea .viewHead .titleArea .report{background:url('//img.tourtips.com/images/cm/bg_line_viewHead.gif') 0 3px no-repeat;}
+.viewArea .viewHead .titleRight{position:absolute;top:49px;right:19px;text-align:right;}
+.viewArea .viewHead .titleRight p{font:normal 13px/13px "NanumBarunGothicBold";color:#232323;}
+.viewArea .viewHead .titleRight p em{color:#ff4f02;margin-left:3px;}
+.viewArea .viewBody{position:relative;padding:30px;border:1px solid #ddd;border-top:1px solid #e3e3e3;}
+.viewArea .viewBody iframe{max-width:100%;}
+.viewArea .viewBody .attachList{width:100%;text-align:right;margin:-10px 0 19px 0;border:none;}
+.viewArea .viewBody .attachList ul{display:block;margin:0;}
+.viewArea .viewBody .attachList ul:after{content:'';display:block;clear:both;}
+.viewArea .viewBody .attachList li{display:block;text-align:right;}
+.viewArea .viewBody .attachList ul{display:block;}
+.viewArea .viewBody .attachList li{display:block;clear:both;vertical-align:middle;margin-bottom:9px;}
+.viewArea .viewBody .attachList li:first-child{margin-top:0;}
+.viewArea .viewBody .attachList li a{display:inline-block;font-size:13px;color:#232323;text-decoration:underline;vertical-align:middle;margin-right:6px;}
+.viewArea .viewBody .attachList li a .ico{display:inline-block;width:7px;height:11px;margin-right:6px;vertical-align:top;background:url('//img.tourtips.com/images/cm/ico/spr_community.png') -41px -35px no-repeat;}
+.viewArea .viewBody .attachList li span{display:inline-block;color:#999;font-size:12px;vertical-align:middle;margin-right:0;}
+.viewArea .viewBody .viewCnts{font-size:14px;line-height:23px;color:#232323;clear:both;min-height:114px;overflow:hidden;}
+.viewArea .viewBody .viewCnts div,
+.viewArea .viewBody .viewCnts p{max-width:100% !important;}
+.viewArea .viewBody .viewCnts img{position:relative !important;max-width:100% !important;height:auto !important;}
+.viewArea .viewBody .viewCnts table{table-layout:fixed;width:100%;}
+.viewArea .viewBody .viewCnts table th,
+.viewArea .viewBody .viewCnts table td{max-width:100% !important;}
+/* 해당 스타일은 커뮤니티 뷰 내 내용을 긁어와서 붙여넣기 했을 때 발생하는 이슈로 넣은 것. (2016.05.17) */
+.viewArea .viewBody .viewCnts .image-block-wrapper.has-aspect-ratio{padding-bottom:0 !important;}
+.viewArea .viewBody .viewCnts .se_component{margin-left:0 !important;margin-right:0 !important;}
+.viewArea .viewBody .viewCnts .se_sectionArea.se_align-extend{margin:0 auto !important;}
+.viewArea .viewBody .viewCnts .se_imageStripArea{display:block !important;width:auto !important;height:auto !important;margin:5px 0 0 0 !important;}
+.viewArea .viewBody .viewCnts .se_imageStripArea img{width:auto !important;margin:2px auto !important;}
+.viewArea .viewBody .viewCnts .video-block div{position:relative !important;height:auto !important;padding-bottom:0 !important;}
+.viewArea .viewBody .viewCnts .video-block iframe{position:relative !important;width:100% !important;height:500px !important;}
+/* //해당 스타일은 커뮤니티 뷰 내 내용을 긁어와서 붙여넣기 했을 때 발생하는 이슈로 넣은 것. (2016.05.17) */
+.viewArea .viewBody .imgWrap{position:relative;display:inline-block;max-width:742px;font:0/0 arial;letter-spacing:0;overflow:visible;}
+.viewArea .viewBody .imgWrap .imgBtn{display:none;z-index:2;position:absolute;top:0;right:0;}
+.viewArea .viewBody .imgWrap a{float:left;display:inline-block;width:86px;height:29px;font:0/0 arial;letter-spacing:0;background:transparent url('//img.tourtips.com/images/pc/community/spr_btn_imgWrap.png') no-repeat;}
+.viewArea .viewBody .imgWrap .imgBtn .save{margin-right:5px;}
+.viewArea .viewBody .imgWrap .imgBtn .view{width:85px;background-position:-91px 0;}
+.viewArea .viewBody .imgWrap:hover .imgBtn{display:block;}
+.viewArea .viewBody .hashTags{margin:22px 0 -10px 0;}
+.viewArea .additional{padding:30px;margin:-1px 0 20px 0;background:#f3f3f3;border:1px solid #e3e3e3;overflow:hidden;}
+.viewArea .additional .title{display:block;font:normal 14px "NanumBarunGothicBold";color:#232323;margin:0 0 15px;}
+.viewArea .additional ul{display:block;width:780px;margin:-20px 0 0 0;}
+.viewArea .additional li{float:left;display:inline-block;width:93px;margin:20px 15px 0 0;}
+.viewArea .additional .thumb{display:block;width:93px;height:70px;margin:0 0 10px;}
+.viewArea .additional .thumb img{width:93px;height:70px;}
+.viewArea .additional p{display:block;height:13px;font-size:13px;color:#232323;line-height:100%;padding-right:6px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;background:url('//img.tourtips.com/images/pc/dest/angle.png') right 0 no-repeat;}
+@media \0screen {
+    .viewArea .additional p{padding-top:2px;background-position:right 1px;}
+}
+.viewArea .additional a:hover p{text-decoration:underline;}
+
+.viewArea .viewFoot{margin-top:20px;}
+.viewArea .viewFoot .viewSns{text-align:center;padding:30px 0;margin:-20px 0 20px 0;border:1px solid #e3e3e3;border-width:0 1px 1px 1px;}
+.viewArea .viewFoot .viewSns p{display:block;font-size:14px;color:#777;margin:0 0 15px;}
+.viewArea .viewFoot .viewBtn{margin:0 0 40px;}
+.viewArea .viewFoot .preNextArea table{width:100%;table-layout:fixed;border:1px solid #ddd;}
+.viewArea .viewFoot .preNextArea table tr:first-child th,
+.viewArea .viewFoot .preNextArea table tr:first-child td{border-top:1px solid #ddd;}
+.viewArea .viewFoot .preNextArea table th,
+.viewArea .viewFoot .preNextArea table td{font-size:14px;font-weight:normal;color:#232323;vertical-align:middle;padding:8px 20px;border-top:1px solid #ececec;}
+.viewArea .viewFoot .preNextArea table th{text-align:center;padding:13px 0;border-right:1px solid #ddd;}
+.viewArea .viewFoot .preNextArea table .num{color:#777;font-size:12px;text-align:center;}
+.viewArea .viewFoot .preNextArea table a{line-height:22px;}
+.viewArea .viewFoot .preNextArea table a:hover{text-decoration:underline;}
+.viewArea .viewFoot .preNextArea table .notice td{background:#fffee4;}
+.viewArea .viewFoot .preNextArea table .notiImg{vertical-align:middle;}
+.viewArea .viewFoot .preNextArea table .writer{font-size:12px;color:#777;padding:8px 13px;}
+.viewArea .viewFoot .preNextArea table .writer:hover{text-decoration:underline;cursor:pointer;}
+.viewArea .viewFoot .preNextArea table .num{padding:8px 13px;}
+.viewArea .viewFoot .preNextArea table .reply{color:#ff4f02;font-size:13px;}
+.viewArea .viewFoot .preNextArea table i.ico{display:inline-block;text-indent:-9999em;font:0/0 arial;vertical-align:middle;margin-left:1px;background:url('//img.tourtips.com/images/cm/ico/spr_community.png') no-repeat;}
+.viewArea .viewFoot .preNextArea table i.ico.noti{width:14px;height:16px;background-position:0 0;}
+.viewArea .viewFoot .preNextArea table i.ico.photo{width:16px;height:12px;background-position:-14px 0;}
+.viewArea .viewFoot .preNextArea table i.ico.attach{width:11px;height:12px;background-position:-30px 0;}
+.viewArea .viewFoot .preNextArea table i.ico.new{width:13px;height:13px;background-position:-41px 0;}
+.viewArea .viewFoot .preNextArea table i.ico.mobile{float:left;width:18px;height:24px;vertical-align:top;margin-right:7px;background-position:-54px 0;}
+.viewArea .viewFoot .preNextArea table i.ico.tourtips{width:16px;height:15px;margin-right:4px;background-position:0 -16px;}
+.viewArea .viewFoot .preNextArea table i.ico.editor{float:left;width:15px;height:19px;margin-right:5px;background-position:-16px -16px;}
+
+/* replyArea */
+.replyListWrap{position:relative;}
+.replyArea{position:relative;border:1px solid #e3e3e3;margin:0 0 10px;}
+.replyArea .replyStatus{height:40px;vertical-align:middle;}
+.replyArea .replyStatus p{display:inline-block;font-size:13px;color:#232323;vertical-align:middle;margin:0 0 0 14px;}
+.replyArea .replyStatus p i{color:#ff4f02;font-style:normal;}
+.replyArea .replyStatus .vBlank{display:inline-block;height:100%;vertical-align:middle;}
+
+.replyArea .replyStatus .support_area{position:relative;float:right;display:inline-block;margin:0;}
+.replyArea .replyStatus .support_area a.btn_support{display:block;width:138px;height:30px;font:normal 12px/30px "NanumBarunGothic";text-align:center;color:#FFF;margin:10px;background:#15cfa1;}
+.replyArea .replyStatus .support_area .introLayer{z-index:99;position:absolute;top:-59px;left:-258px;width:293px;height:126px;font:0/0 arial;letter-spacing:0;cursor:pointer;background:url('//img.tourtips.com/images/pc/book/img_introLayer.png') no-repeat;}
+.replyArea .replyStatus .support_area .introLayer p{font:normal 0/0 arial;text-indent:-9999em;}
+.replyArea .replyStatus .support_area .introLayer button{position:absolute;right:43px;top:0;display:block;width:30px;height:30px;font:0/0 arial;letter-spacing:0;overflow:hidden;background:none;}
+
+.replyArea .replyList{display:block;}
+.replyArea .replyList:after{content:'';display:block;clear:both;}
+.replyArea .replyList li{clear:both;display:block;position:relative;padding:20px 30px;border-top:1px solid #ececec;}
+.replyArea .replyList .txt strong.secreet{display:inline-block;width:44px;height:18px;font:0/0 arial;letter-spacing:0;vertical-align:middle;margin-right:3px;background:url('//img.tourtips.com/images/pc/ticket/ico_secreet.gif') no-repeat;}
+.replyArea .replyList .txt span.secreetTxt{color:#999;}
+.replyArea .profileImg{float:left;display:inline-block;width:34px;height:34px;margin-right:10px;border-radius:34px;overflow:hidden;}
+.replyArea .profileImg img{width:34px;}
+.replyArea .profileImg .best{position:absolute;top:38px;left:37px;display:block;width:21px;height:16px;font:0/0 airal;letter-spacing:0;text-indent:-9999px;background:url('//img.tourtips.com/images/cm/ico/ico_best.png') no-repeat;}
+.replyArea .replyList .replyCnt{display:inline-block;max-width:90%;}
+.replyArea .replyList .replyCnt .qnaImgArea{margin-top:10px;}
+.replyArea .replyList .replyCnt .qnaImgArea img{display:block;max-width:100%;height:auto;margin:0 0 10px;}
+.replyArea .replyList .writer{float:left;display:inline-block;height:19px;font-size:14px;color:#232323;cursor:pointer;vertical-align:top;margin:0 10px 0 0;}
+.replyArea .replyList .writer:hover{text-decoration:underline;}
+.replyArea .replyList .icoEditor{float:left;display:inline-block;width:15px;text-indent:-9999em;font:0/0 arial;letter-spacing:0;vertical-align:top;padding:0;margin-right:10px;}
+.replyArea .replyList i.ico.editor{width:15px;height:19px;margin-right:10px;background-position:-16px -16px;}
+.replyArea .replyList i.ico.tourtips{width:16px;height:15px;margin-right:5px;background-position:0 -16px;}
+.replyArea .replyList .date{float:left;display:inline-block;font-size:10px;color:#999;margin-right:8px;}
+.replyArea .replyList .question{position:relative;top:-4px;display:inline-block;width:69px;height:20px;text-indent:-9999px;font:0/0 arial;letter-spacing:0;vertical-align:top;margin-left:7px;background:url('//img.tourtips.com/images/pc/dest/ico_question.png') no-repeat;}
+.replyArea .replyList .txt{clear:both;display:block;font-size:14px;color:#232323;line-height:23px;word-wrap:break-word;}
+.replyArea .replyList .txt img{display:block;max-width:100%;margin:10px 0;}
+.replyArea .replyList .txt .mention{font-weight:normal;color:#777;margin-right:5px;}
+.replyArea .replyList .new{float:left;display:inline-block;text-indent:-9999em;font:0/0 arial;letter-spacing:0;width:13px;height:13px;vertical-align:middle;margin-left:5px;background:url('//img.tourtips.com/images/cm/ico/spr_community.png') -41px 0 no-repeat;}
+.replyArea .replyList .functionArea{position:absolute;top:22px;right:30px;text-align:right;font:0/0 arial;}
+.replyArea .replyList .functionArea button{font:normal 12px "NanumBarunGothic";color:#999;padding:0;margin:0 0 0 13px;}
+.replyArea .replyList .functionArea button:hover{text-decoration:underline;}
+.replyArea .replyList li.editing .functionArea button{color:#ff0000;}
+.replyArea .replyList .commentArea{padding-left:44px;background:url('//img.tourtips.com/images/pc/community/bg_commentArea.gif') 23px 26px no-repeat;}
+.replyArea .replyList .commentArea:after{content:'';display:block;clear:both;}
+.replyArea .replyList .commentArea.comment_list .commentFormArea{margin-bottom:0;}
+.replyArea .replyList .commentArea .mention{margin-right:5px;}
+.replyArea .commentForm{display:block;min-height:52px;vertical-align:middle;padding:20px 30px;border-top:1px solid #e3e3e3;}
+.replyArea .commentForm .commentFormArea{margin:0 0 0 54px;}
+.replyArea .commentForm .commentFormArea div.secreet{position:absolute;top:-46px;right:0;}
+.replyArea .commentForm .commentFormArea div.secreet label{position:relative;display:inline-block;padding-left:20px;cursor:pointer;font-size:14px;color:#232323;background:url('//img.tourtips.com/images/pc/ticket/spr_checkArea.png') 0 0 no-repeat;overflow:hidden;}
+.replyArea .commentForm .commentFormArea div.secreet input{position:absolute;top:-99px;margin:0;padding:0;}
+.replyArea .commentForm .commentFormArea div.secreet label.cur{background-position:0 -50px;}
+.replyArea .infoArea{display:block;font-size:12px;color:#777;margin:8px 0 0 53px;}
+.replyArea .infoArea a{color:#777;text-decoration:underline;}
+.replyArea .commentForm .profileImg{vertical-align:middle;margin-top:0;}
+.replyArea .commentFormArea{position:relative;height:64px;vertical-align:middle;padding:5px 65px 5px 5px;margin:0 0 20px 54px;border:1px solid #ddd;background:#f3f3f3;}
+.replyArea .commentFormArea textarea{display:block;width:100%;height:100%;font-size:14px;resize:none;border:none;border-radius:0;box-shadow:none;background:none;margin:0;padding:0;line-height:normal;}
+.replyArea .regist{position:absolute;top:-1px;right:-1px;width:60px;height:76px;font-size:14px;color:#232323;text-align:center;vertical-align:middle;background:#FFF;border:1px solid #ddd;}
+.replyArea .commentForm .commentFormArea .regist{right:-1px;}
+.replyArea .commentFormArea .cancle{position:absolute;bottom:-22px;right:-1px;font-size:12px;color:#ff4f02;text-decoration:underline;}
+.replyArea .questionBox{margin:-2px 0 11px 51px;}
+.replyArea .questionBox label{position:relative;top:2px;float:left;display:inline-block;width:111px;height:26px;line-height:26px;font-size:14px;color:#fc6610;text-indent:32px;cursor:pointer;margin-right:10px;border:2px solid #fc6610;border-radius:5px;overflow:hidden;}
+.replyArea .questionBox label span{position:absolute;left:4px;top:50%;display:block;width:14px;height:13px;margin:-8px 0 0 0;vertical-align:middle;border:2px solid #fc6610;border-radius:5px;}
+.replyArea .questionBox label.cur span{background:url('//img.tourtips.com/images/pc/dest/spr_ico_openeditor.png') 2px -68px no-repeat;}
+.replyArea .questionBox input{position:absolute;top:-50px;margin:0;padding:0;}
+.replyArea .questionBox p{font-size:13px;line-height:18px;}
+.replyArea .questionBox p a{text-decoration:underline;}
+.replyArea .replyList .deleted{padding-left:78px;}
+.replyArea .replyList .deleted .profileImg,
+.replyArea .replyList .deleted .writer,
+.replyArea .replyList .deleted .icoEditor,
+.replyArea .replyList .deleted .functionArea{display:none;}
+.replyArea .paging{margin:0;border:none;border-top:1px solid #e3e3e3;}
+.replyArea.bestKnowhow{margin:0 0 20px;}
+.replyArea.bestKnowhow li:first-child{border:none;}
+
+/* btn */
+.btn.doScrapBtn span{display:inline-block;height:17px;padding-left:24px;vertical-align:middle;line-height:20px;background:url('//img.tourtips.com/images/pc/dest/spr_ico_doScrapBtn.png') 0 0 no-repeat;}
+.btn.doScrapBtn span i{position:relative;top:1px;font:normal 13px "NanumBarunGothicBold";color:#ff4f02;font-style:normal;margin-left:3px;vertical-align:middle;}
+.btn.doScrapBtn.cur span{background-position:0 -36px;}
+.viewPlace{position:absolute;top:53px;right:0;}
+.viewPlace span{display:inline-block;height:14px;padding-left:18px;vertical-align:middle;line-height:15px;white-space:nowrap;background:url('//img.tourtips.com/images/pc/dest/spr_ico_openeditor.png') 0 -105px no-repeat;}
+
+/* profilePopup */
+.profilePopup{z-index:999999;position:absolute;width:374px;background:#FFF;border:1px solid #898989;}
+.profilePopup h5{display:block;font:normal 15px "NanumBarunGothicBold";margin:0 0 14px;}
+.profilePopup h6{display:block;font:normal 14px "NanumBarunGothicBold";color:#ff4f02;margin:0 0 6px;}
+.profilePopup .titleArea{height:59px;font:normal 20px "NanumBarunGothicBold";padding:0 0 0 20px;color:#FFF;background:#f37720;}
+.profilePopup .titleArea em{display:inline-block;height:19px;vertical-align:middle;}
+.profilePopup .titleArea .setting{display:inline-block;width:19px;height:19px;font:0/0 arial;letter-spacing:0;text-indent:-9999px;vertical-align:middle;margin-left:2px;background:url('//img.tourtips.com/images/cm/spr_profile.png') 0 -80px no-repeat;}
+.profilePopup .titleArea .vBlank{*float:left;display:inline-block;height:100%;vertical-align:middle;}
+.profilePopup .btnCloseProfilePopup{position:absolute;top:20px;right:20px;display:block;width:19px;height:19px;background:url('//img.tourtips.com/images/cm/spr_profile.png') 0 -120px no-repeat;}
+.profilePopup .profileArea{font:0/0 arial;letter-spacing:0;padding:20px 10px 20px 20px;background:#f8f8f8;}
+.profilePopup .profileArea .profilePhoto{*float:left;display:inline-block;width:100px;height:100px;vertical-align:middle;margin-right:20px;border-radius:100px;overflow:hidden;}
+.profilePopup .profileArea .profilePhoto img{width:100px;height:100px;}
+.profilePopup .profileArea p{display:inline-block;width:215px;font:normal 15px/21px "NanumBarunGothic";color:#232323;vertical-align:middle;word-wrap:break-word;}
+.profilePopup .profileArea p a:hover{text-decoration:underline;}
+.profilePopup .place{padding:20px 20px 0;border-top:1px solid #ececec;}
+.profilePopup .place p{color:#666;font-size:14px;margin:0 0 20px;}
+.profilePopup .editorPart{position:relative;padding:20px;border-top:1px solid #ececec;}
+.profilePopup .editorPart .openEditor{position:absolute;top:20px;right:20px;font-size:12px;color:#ff4f02;text-decoration:underline;cursor:pointer;padding-bottom:20px;}
+.profilePopup .editorPart ul{display:block;margin-top:-10px;}
+.profilePopup .editorPart ul:after{content:'';display:block;clear:both;}
+.profilePopup .editorPart li{float:left;display:inline-block;width:50%;margin-top:10px;vertical-align:middle;}
+.profilePopup .editorPart li img{width:35px;vertical-align:middle;margin-right:8px;}
+.profilePopup .editorPart li em{font-size:14px;}
+.profilePopup .editorPart .want_make_comment{display:none;top:38px;padding:15px; right:20px;background:#FFF;}
+.profilePopup .editorPart .want_make_comment_arrow{right:41px}
+.profilePopup .editorPart .want_make_comment{min-width:250px;}
+.profilePopup .editorPart .want_make_comment p{color:#ff0000; font-size:13px; font-weight:600; margin-bottom:10px}
+.profilePopup .editorPart .want_make_comment span{font-size:11px; line-height:16px;}
+.profilePopup .editorPart .want_make_comment a{display:inline-block;color:#0042ff; text-decoration:underline;margin-top:10px;}
+.profilePopup.tourtips .titleArea em{padding-left:28px;background:url('//img.tourtips.com/images/cm/spr_profile.png') 0 2px no-repeat;}
+.profilePopup.tourtips .profileArea p{font-size:14px;}
+.profilePopup.openEditor .titleArea em{padding-left:28px;background:url('//img.tourtips.com/images/cm/spr_profile.png') 0 -40px no-repeat;}
+
+/* myInfoBox */
+.myInfoBox{height:34px;vertical-align:middle;padding:20px 30px;margin:0 0 10px;border:1px solid #e3e3e3;background:#FFF;}
+.myInfoBox:after{content:'';display:block;clear:both;}
+.myInfoBox p{display:inline-block;color:#232323;font-size:15px;vertical-align:middle;}
+.myInfoBox p em{font-family:"NanumBarunGothicBold";color:#ff4f02;vertical-align:middle;}
+.myInfoBox .vBlank{display:inline-block;width:0;height:100%;vertical-align:middle;}
+.myInfoBox .profileImg{float:left;display:inline-block;width:34px;height:34px;margin-right:20px;vertical-align:middle;overflow:hidden;border-radius:34px;}
+.myInfoBox .profileImg img{width:34px;vertical-align:middle;}
+
+/* myNotiTab */
+.myNotiTab{height:39px;margin:0 0 10px;border:1px solid #e3e3e3;}
+.myNotiTab ul{display:block;}
+.myNotiTab ul:after{content:'';display:block;clear:both;}
+.myNotiTab li{float:left;display:inline-block;width:50%;text-align:center;}
+.myNotiTab li a{display:inline-block;height:37px;line-height:38px;font-size:14px;color:#232323;padding:0 10px;}
+.myNotiTab li a em{color:#ff4f02;font-size:12px;font-family:"NanumBarunGothicBold";}
+.myNotiTab li a:hover,
+.myNotiTab li a.on{height:37px;border-bottom:3px solid #f37720;}
+
+/* icoEditor */
+.icoEditor{display:inline-block;height:19px;line-height:17px;font-style:normal;cursor:pointer;padding:0 0 0 21px;}
+.icoEditor:hover{text-decoration:underline;}
+.icoEditor.editor_,
+.icoEditor.editor_c,
+.icoEditor.editor_sm{padding:0;}
+.icoEditor.editor_o{height:20px;line-height:20px;padding-left:16px;background:url('//img.tourtips.com/images/cm/ico/ico_openEditor.gif') no-repeat;}
+.icoEditor.editor_t,
+.icoEditor.editor_mt{background:url('//img.tourtips.com/images/cm/ico/ico_tourtipsEditor.png') no-repeat;}
+.icoEditor.editor_i,
+.icoEditor.editor_l{background:url('//img.tourtips.com/images/cm/ico/ico_lineEditor.png') no-repeat;}
+
+/* autoTagging */
+.autoTagging .inputBox:after{content:'';display:block;clear:both;}
+.autoTagging .tag{position:relative;float:left;display:inline-block;height:32px;font:normal 12px/34px "NanumBarunGothicBold";color:#232323;padding:0 15px;margin:5px 5px 5px 0;background:#FFF;border:1px solid #d6d6d6;}
+.autoTagging .tag .delTag{position:relative;top:-1px;display:inline-block;width:16px;height:16px;font:0/0 arial;letter-spacing:0;vertical-align:middle;margin:0 0 0 9px;padding:0;background:url('//img.tourtips.com/images/pc/community/btn_delTag.png') no-repeat;}
+.autoTagging .tagInput{width:380px;font:normal 14px "NanumBarunGothicBold";color:#232323;padding:8px;}
+.autoTagging .tagInputArea{clear:both;position:relative;display:block;width:399px;margin:0;}
+.autoTagging .tagInputArea .tagList{z-index:10000;position:absolute;top:33px;left:0;display:none;width:396px;background:#FFF;border:1px solid #898989;}
+.autoTagging .tagInputArea .tagList p,
+.autoTagging .tagInputArea .tagList strong{display:inline-block;width:273px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-left:60px;}
+.autoTagging .tagInputArea .tagList p{color:#777;font-size:13px;}
+.autoTagging .tagInputArea .tagList strong{font-size:14px;color:#232323;font-weight:normal;margin:10px 36px 1px 60px;}
+.autoTagging .tagInputArea .tagList ul{display:block;height:362px;overflow-y:auto;}
+.autoTagging .tagInputArea .tagList ul:after{content:'';display:block;}
+.autoTagging .tagInputArea .tagList li{position:relative;display:block;height:50px;clear:both;font-size:12px;color:#232323;padding:5px ;cursor:pointer;}
+.autoTagging .tagInputArea .tagList li em{color:#ff4f02;}
+.autoTagging .tagInputArea .tagList li:hover,
+.autoTagging .tagInputArea .tagList li.cur{background:#eee;}
+.autoTagging .tagInputArea .tagList li.border{border-top:1px solid #e3e3e3;}
+.autoTagging .tagInputArea .tagList .ico{position:absolute;top:5px;left:5px;display:inline-block;width:50px;height:50px;font:0/0 arial;letter-spacing:0;text-indent:-9999px;overflow:hidden;background:url('//img.tourtips.com/images/pc/qna/spr_ico_autoTagging.gif') no-repeat;}
+.autoTagging .tagInputArea .tagList .ico.country{background-position:0 0;}
+.autoTagging .tagInputArea .tagList .ico.majorCity{background-position:0 -50px;}
+.autoTagging .tagInputArea .tagList .ico.city{background-position:0 -100px;}
+.autoTagging .tagInputArea .tagList .ico.zone{background-position:0 -150px;}
+.autoTagging .tagInputArea .tagList .ico.attraction{background-position:0 -200px;}
+.autoTagging .tagInputArea .tagList .ico.restaurant{background-position:0 -250px;}
+.autoTagging .tagInputArea .tagList .ico.shopping{background-position:0 -300px;}
+.autoTagging .tagInputArea .tagList .ico.accommodation{background-position:0 -350px;}
+.autoTagging .tagInputArea .tagList .ico.user{background-position:0 -400px;}
+.autoTagging .tagInputArea .tagList .moreView,
+.autoTagging .tagInputArea .tagList .justCity{display:block;width:100%;height:32px;line-height:32px;text-align:center;font-size:13px;color:#232323;margin:0;background:#f8f8f8;border-top:1px solid #d6d6d6;}
+.autoTagging .tagInputArea .tagList .justCity{border-top:none;border-bottom:1px solid #e3e3e3;}
+.autoTagging .tagInputArea .tagList .moreView strong,
+.autoTagging .tagInputArea .tagList .justCity strong{display:inline;font-weight:normal;margin:0;}
+.autoTagging .tagInputArea .tagList .category{position:absolute;top:14px;right:10px;text-align:right;color:#232323;font:normal 14px "NanumBarunGothicBold";padding:0;}
+.autoTagging .txt{clear:both;display:block;font-size:13px;color:#999;}
+.tagInputArea .btnCancel{position:absolute;top:0;right:0;width:38px;height:32px;display:block;vertical-align:middle;border:none;padding:0;margin:0;background:transparent url('//img.tourtips.com/images/cm/ico/ico_btnCancle.gif') center center no-repeat;}
+
+/* cardWrap */
+.cardWrap{overflow:hidden;margin:0 0 20px;}
+.cardWrap ul{display:block;clear:both;width:880px;margin:-20px 0 0 0;}
+.cardWrap ul:after{content:'';display:block;clear:both;}
+.cardWrap li{float:left;display:inline-block;width:253px;height:360px;margin:22px 22px 0 0;}
+.cardWrap li:hover .border{opacity:0.2;filter:alpha(opacity=20);}
+#contentWrap .cardWrap ul{width:1200px;}
+#contentWrap .cardWrap li{margin-right:26px;}
+#contentWrap .cardWrap .likeArea ul{width:100%;}
+
+/* moveFolder */
+.moveFolder{z-index:100;display:none;position:absolute;top:40px;right:0;width:186px;font-size:12px;color:#232323;text-align:left;cursor:text;background:#FFF;border:1px solid #898989;}
+.moveFolder p{position:relative;height:31px;line-height:32px;text-indent:10px;border-bottom:1px solid #dcdcdc;}
+.moveFolder p .ico{position:absolute;top:50%;right:10px;display:inline-block;width:10px;height:6px;vertical-align:middle;margin-top:-3px;background:url('//img.tourtips.com/images/cm/spr_ico_common.png') 0 -70px no-repeat;}
+.moveFolder ul{display:block;width:186px;min-height:72px;max-height:166px;overflow-y:auto;cursor:pointer;margin:0;}
+.moveFolder ul:after{content:'';display:block;clear:both;}
+.moveFolder li{clear:both;float:none;display:block;width:auto;height:auto;cursor:pointer;margin:0;padding:5px 10px 5px 30px;background:url('//img.tourtips.com/images/pc/dest/ico_scrap.png') 10px 6px no-repeat;}
+.moveFolder li:hover{background-color:#eee;}
+.moveFolder li.scrap{background:url('//img.tourtips.com/images/pc/dest/ico_scrap_on.png') 10px 6px no-repeat;}
+.moveFolder .newFolder{height:29px;vertical-align:middle;text-align:center;font:0/0 arial;letter-spacing:0;padding-top:5px;border-top:1px solid #dcdcdc;}
+.moveFolder .newFolder input{display:inline-block;width:119px;height:12px;font:normal 12px "NanumBarunGothic";margin:0;background:#FFF;border:1px solid #d6d6d6;border-right:0;vertical-align:middle;padding:5px 4px 4px 4px;border-radius:0;box-shadow:none;}
+.moveFolder .newFolder .createFd{float:none;display:inline-block;vertical-align:middle;width:48px;height:23px;color:#FFF;font:normal 12px/24px "NanumBarunGothic";text-align:center;padding:0;margin:0;background:#f37720;border:1px solid #de6d1d;}
+#contentWrap .cardWrap .moveFolder ul{width:186px;margin:0;}
+
+/* card */
+.card{z-index:5;position:relative;display:block;width:253px;height:360px;overflow:hidden;}
+.card a{display:block;height:308px;}
+.card .border{z-index:5;position:absolute;top:0;left:0;width:251px;height:358px;border:1px solid #000;opacity:0.1;filter:alpha(opacity=10);background:url('//img.tourtips.com/images/cm/bg_border_middle_v2.png') 0 191px repeat-x;}
+.card :hover.border{opacity:0.2;filter:alpha(opacity=20);}
+.card .thumb{z-index:1;position:relative;width:253px;height:192px;overflow:hidden;}
+.card .thumb img{z-index:0;width:253px;min-height:192px;}
+.card .openEditor{z-index:2;position:absolute;top:0;left:0;width:253px;height:192px;}
+.card .openEditor p{z-index:2;position:absolute;left:62px;bottom:13px;width:190px;font-size:13px;line-height:19px;color:#FFF;}
+.card .openEditor .profileImg{z-index:2;position:absolute;bottom:16px;left:16px;width:34px;height:34px;overflow:hidden;border-radius:34px;}
+.card .openEditor .profileImg img{width:34px;}
+.card .openEditor .cover{z-index:1;position:absolute;top:0;left:0;display:block;width:100%;height:100%;background:url('//img.tourtips.com/images/cm/cover_listArea_editor.png') 0 bottom repeat-x;}
+.card .infoWrap{position:absolute;top:192px;left:0;width:221px;height:103px;padding:14px 16px 0 16px;overflow:hidden;}
+.card .infoWrap .title{display:block;max-height:41px;font:normal 18px/22px "NanumBarunGothic";color:#232323;margin:0 0 6px;overflow:hidden;}
+.card .infoWrap .desc{display:block;height:42px;color:#777;line-height:20px;margin:0 0 14px;overflow:hidden;}
+.card .likeArea{z-index:6;position:absolute;bottom:0;left:1px;width:251px;height:50px;text-align:center;border-top:1px solid #e5e5e5;}
+.card .likeArea ul{width:100%;margin:0;}
+.card .likeArea li{float:left;display:inline-block;width:83px;height:49px;border-left:1px solid #e5e5e5;margin:0;}
+.card .likeArea li:first-child{border:none;}
+.card .likeArea button{display:block;width:100%;height:100%;text-align:center;font:normal 12px "NanumBarunGothic";color:#898989;padding:29px 0 0 0;background:url('//img.tourtips.com/images/pc/mypage/spr_ico_v2.png') no-repeat;}
+.card .likeArea span{display:none;}
+.card .likeArea i{font-style:normal;}
+.card .likeArea .cur{color:#232323;}
+.card .likeArea .awesome button{background-position:28px 9px;}
+.card .likeArea .awesome.cur button{background-position:28px -59px;}
+.card .likeArea .good button{background-position:-46px 9px;}
+.card .likeArea .good.cur button{background-position:-46px -59px;}
+.card .likeArea .aweful button{background-position:-116px 9px;}
+.card .likeArea .aweful.cur button{background-position:-116px -59px;}
+.card .scrapWrap{z-index:101;position:absolute;top:16px;right:16px;width:186px;}
+.card .scrapWrap .scrapBtn{position:absolute;top:0;right:0;display:block;width:50px;height:50px;margin:0;padding:0;background:url('//img.tourtips.com/images/cm/spr_scrapBtn.png') no-repeat;}
+.card .scrapWrap .scrapBtn p{position:relative;top:13px;left:0;display:block;width:100%;height:12px;font-size:12px;text-align:center;color:#FFF;}
+.card .scrapWrap .scrapBtn p i{font-style:normal;}
+.card .scrapWrap .scrapBtn.on{background-position:0 -50px;}
+.card .scrapWrap .moveFolder{top:58px;}
+.card .tag{display:block;font-size:13px;margin:0 0 8px;}
+.card .date{display:block;min-height:14px;color:#898989;font-size:12px;font-family:Tahoma;letter-spacing:0;margin:0 0 6px;}
+.card .recommend{z-index:3;position:absolute;top:0;left:16px;display:block;width:34px;height:37px;font:0/0 arial;letter-spacing:0;background:url('//img.tourtips.com/images/pc/dest/ico_recommend_v4.png') no-repeat;}
+.card .writer{z-index:6;position:absolute;top:165px;right:0;width:94px;text-align:center;}
+.card .writer .profileImg{float:right;width:50px;height:50px;margin-right:20px;border:2px solid #FFF;border-radius:50px;overflow:hidden;background:#EBEBEB url('//img.tourtips.com/images/common/man_m.gif') center center no-repeat;}
+.card .writer .profileImg img{width:50px;min-height:50px;}
+.card .writer p{position:absolute;top:63px;right:0;display:block;width:100%;text-align:center;font-size:12px;color:#898989;white-space:nowrap;}
+
+/* card - 추천여행지/추천숙박 */
+.card.spot .title{display:block;height:20px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+
+/* card - 전문가 여행기 */
+.card.column .infoWrap{padding-top:36px;}
+.card.column .likeArea li{width:100%;}
+.card.column .likeArea .good button{width:100%;text-align:center;background:url('//img.tourtips.com/images/pc/mypage/spr_ico_only.png') center 9px no-repeat;}
+.card.column .likeArea .good.cur button{background-position:center -59px;}
+
+/* card - 테마여행 동영상 */
+.card.video .thumb{height:142px;padding:25px 0;background:#262626;}
+.card.video .thumb img{min-height:142px;max-height:142px;}
+.card.video .thumb .ico{z-index:3;position:absolute;top:117px;left:20px;width:26px;height:30px;background:url('//img.tourtips.com/images/cm/spr_ico_common.png') -250px 0 no-repeat;}
+.card.video .desc{height:18px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+.card.video .likeArea li{width:100%;}
+.card.video .likeArea .good button{width:100%;text-align:center;background:url('//img.tourtips.com/images/pc/mypage/spr_ico_only.png') center 9px no-repeat;}
+.card.video .likeArea .good.cur button{background-position:center -59px;}
+.card.video .videoWrap{z-index:3;position:absolute;top:25px;left:0;width:253px;height:142px;}
+
+/* 버튼 정렬 공통 스타일 */
+.btnWrap.L{text-align:left;}
+.btnWrap.C{text-align:center;}
+.btnWrap.R{text-align:right;}
+
+/* common_loading */
+.common_loading{z-index:30000;display:none;position:fixed;top:50%;left:50%;margin:-67.5px 0 0 -67.5px;opacity:0.8;filter:alpha(opacity=80);}
+
+/* fhBanner */
+.fhBanner{margin:20px 0;}
+.fhBanner ul{display:block;}
+.fhBanner ul:after{content:'';display:block;clear:both;}
+.fhBanner li{float:left;display:inline-block;width:534px;height:70px;margin-left:22px;}
+.fhBanner li:first-child{margin:0;}
+
+/* choiceLanguage */
+.choiceLanguage{display:none;z-index:10;position:absolute;top:50%;right:0;width:125px;height:34px;font-size:12px;vertical-align:middle;margin-top:-17px;border:1px solid #e3e3e3;}
+.choiceLanguage .txt{height:100%;vertical-align:middle;cursor:pointer;line-height:34px;padding:0 10px;background:url('//img.tourtips.com/images/cm/ico/ico_arrow_down.gif') 104px center no-repeat;}
+.choiceLanguage .txt img{width:23px;vertical-align:middle;margin-right:6px;}
+.choiceLanguage .selectLanguage{display:none;position:absolute;top:34px;left:-1px;width:125px;border:1px solid #898989;background:#FFF;overflow:hidden;}
+.choiceLanguage .selectLanguage ul{display:block;}
+.choiceLanguage .selectLanguage ul:after{content:'';display:block;clear:both;}
+.choiceLanguage .selectLanguage li{clear:both;height:24px;vertical-align:middle;}
+.choiceLanguage .selectLanguage li a{display:block;height:100%;line-height:24px;color:#232323;vertical-align:middle;padding:0 10px;}
+.choiceLanguage .selectLanguage li a:hover{background:#eee;}
+.choiceLanguage .selectLanguage li a img{width:23px;margin-right:6px;vertical-align:middle;}
+.choiceLanguage .selectLanguage li.china a{font-family:"微软雅黑";}
+.choiceLanguage.on .selectLanguage{display:block;}
+.choiceLanguage.on .txt{background-image:url('//img.tourtips.com/images/cm/ico/ico_arrow_up.gif');}
+
+/* tourCityBox */
+.tourCityBox{display:table;width:1088px;margin:0 0 42px;border:1px solid #e5e5e5;}
+.tourCityBox .cityList{display:table-cell;width:180px;padding:0 0 13px;border-left:1px solid #e5e5e5;}
+.tourCityBox .cityList:first-child{border-left:none;}
+.tourCityBox h1,
+.tourCityBox .area{display:block;font:normal 15px/41px "NanumBarunGothicBold";color:#232323;text-align:center;margin:0 0 7px;background:#f7f7f7;}
+.tourCityBox a{display:block;height:36px;font:normal 14px/37px "NanumBarunGothic";color:#232323;vertical-align:middle;padding:0 0 0 30px;}
+.tourCityBox a:first-child{padding-top:7px;}
+.tourCityBox a:hover{text-decoration:underline;color:#ff4f02;background:#fef1e8;}
+.tourCityBox a img{width:30px;margin-right:10px;vertical-align:middle;}
+.tourCityBox .new{position:relative;top:-1px;display:inline-block;width:13px;height:13px;font:0/0 arial;letter-spacing:0;text-indent:-9999em;margin-left:5px;vertical-align:middle;background:url('//img.tourtips.com/images/cm/ico/ico_new.png') no-repeat;}
+.tourCityBox .ing{position:relative;top:-1px;display:inline-block;width:21px;height:13px;font:0/0 arial;letter-spacing:0;text-indent:-9999em;margin-left:5px;vertical-align:middle;background:url('//img.tourtips.com/images/pc/main/map_v2/ico_ing.png') no-repeat;}
+.tourCityBox .ready{opacity:0.5;filter:alpha(opacity=50);cursor:default;white-space:nowrap;}
+.tourCityBox .ready:hover{color:#232323;background:none;text-decoration:inherit;}
+.tourCityBox .recommend{width:28px;height:14px;top:-1px;display:inline-block;font:0/0 arial;letter-spacing:0;text-indent:-9999em;margin-left:5px;vertical-align:middle;background:url('//img.tourtips.com/images/pc/main/map_v2/ico_recommend.png') no-repeat;}
+
+/* pageDesc */
+.pageDesc{width:100%;height:49px;border-bottom:1px solid #e3e3e3;background:#FFF;}
+.pageDesc .in{position:relative;width:1090px;height:100%;margin:0 auto;}
+.pageDesc .desc{position:absolute;top:50%;left:0;display:inline-block;height:14px;line-height:14px;color:#232323;font-size:14px;margin-top:-7px;}
+.pageDesc .desc em{color:#ff4f02;}
+.pageDesc .viewCityList{position:absolute;top:50%;right:0;display:inline-block;height:14px;line-height:14px;font-size:14px;margin-top:-7px;}
+.pageDesc .viewCityList .ico{display:inline-block;width:6px;height:10px;vertical-align:middle;margin-left:11px;background:url('//img.tourtips.com/images/cm/ico/ico_arrow_pageDesc.png') 0 0 no-repeat;}
+.pageDesc #viewCityListLayerBtn.viewCityList .ico{width:10px;height:6px;background:url('//img.tourtips.com/images/cm/spr_ico_common.png') 0 -70px no-repeat;}
+.pageDesc #viewCityListLayerBtn.viewCityList.cur .ico{background-position:-100px -70px;}
+.pageDesc .cityListLayer{display:none;z-index:1000;position:absolute;top:49px;left:0;width:1088px;background:#FFF;border:1px solid #919191;*zoom:1;}
+.pageDesc .cityListLayer:after{content:'';display:block;clear:both;}
+.pageDesc .cityListLayer .group{float:left;display:inline-block;width:180px;height:420px;font-size:13px;border-left:1px solid #ececec;background:url('//img.tourtips.com/images/pc/dest/bg_continent.gif') repeat-x;}
+.pageDesc .cityListLayer .group:first-child{width:181px;border-left:none;}
+.pageDesc .cityListLayer .group .continent{display:block;height:40px;line-height:40px;font-weight:normal;text-indent:29px;margin:0 0 5px;background:#f7f7f7;}
+.pageDesc .cityListLayer .group:first-child .continent{border:none;}
+.pageDesc .cityListLayer .group a:hover,
+.pageDesc .cityListLayer .group a.cur{color:#ff4f02;text-decoration:underline;}
+.pageDesc .cityListLayer .group ul{display:block;*zoom:1;overflow:hidden;}
+.pageDesc .cityListLayer .group ul:after{content:'';display:block;clear:both;}
+.pageDesc .cityListLayer .group li{height:16px;padding:7px 0 7px 29px;}
+.pageDesc .cityListLayer .group li a{color:#232323;}
+.pageDesc .cityListLayer .group .ready{opacity:0.5;filter:alpha(opacity=50);cursor:default;}
+.pageDesc .cityListLayer .group .ready:hover{color:#232323;text-decoration:inherit;}
+.pageDesc .cityListLayer .group .new{position:relative;top:-1px;display:inline-block;width:13px;height:13px;font:0/0 arial;letter-spacing:0;text-indent:-9999em;margin-left:5px;vertical-align:middle;background:url('//img.tourtips.com/images/cm/ico/ico_new.png') no-repeat;}
+.pageDesc .cityListLayer .group .ing{position:relative;top:-1px;display:inline-block;width:21px;height:13px;font:0/0 arial;letter-spacing:0;text-indent:-9999em;margin-left:5px;vertical-align:middle;background:url('//img.tourtips.com/images/pc/main/map_v2/ico_ing.png') no-repeat;}
+.pageDesc .cityListLayer.cur{display:block;}
+.pageDesc.fixed{z-index:101;position:fixed;top:58px;}
+.pageDesc .cityListLayer .tourCityBox{border:none;margin:0;}
+
+/* error_body */
+.error_body         {margin:100px 0 200px 360px}
+.error_title        {font-size:18px; color:black; font-weight:600}
+.error_comment  {margin-top:20px; width:550px; font-size:13px; color:#999999; letter-spacing:0; line-height:16px}
+.error_comment a  {text-decoration:underline}
+.error_btn          {margin-top:30px}
+
+/* ticketListArea */
+.ticketListArea{overflow:hidden;}
+.ticketListArea ul{display:block;width:1200px;margin-top:-20px;}
+.ticketListArea ul:after{content:'';display:block;clear:both;}
+.ticketListArea li{position:relative;float:left;display:inline-block;width:350px;height:450px;margin:20px 20px 0 0;overflow:hidden;}
+.ticketListArea li a{display:block;width:100%;height:100%;}
+.ticketListArea li a .border{z-index:5;position:absolute;top:0;left:0;width:348px;height:448px;border:1px solid #000;opacity:0.1;filter:alpha(opacity=10);}
+.ticketListArea li a:hover .border{opacity:0.2;filter:alpha(opacity=20);}
+.ticketListArea li.noData{clear:both;width:100%;height:auto;}
+.ticketListArea li.noData div{width:1088px;text-align:center;color:#777;font-size:18px;padding:90px 0 88px 0;border:1px solid #e3e3e3;}
+.ticketListArea li.noData strong{display:block;font-weight:normal;color:#232323;margin:0 0 11px;}
+.ticketListArea li.noData strong em{color:#ff4f02;}
+.ticketListArea .ticketList .mark{z-index:5;position:absolute;top:259px;right:20px;font:0/0 arial;vertical-align:middle;}
+.ticketListArea .ticketList .thumb{position:relative;width:350px;height:270px;overflow:hidden;}
+.ticketListArea .ticketList .thumb img{z-index:1;position:absolute;top:0;left:50%;height:100%;margin-left:-188px;}
+.ticketListArea .ticketList .thumb .shadow{z-index:2;display:none;position:absolute;top:0;left:0;width:100%;height:100%;background:url('//img.tourtips.com/images/pc/ticket/shadow_ticketList.png') repeat-x;}
+.ticketListArea .ticketList .ing{z-index:2;position:absolute;top:0;left:0;display:block;width:350px;height:270px;}
+.ticketListArea .ticketList .ing img{z-index:2;position:absolute;top:50%;left:50%;margin:-12px 0 0 -107px;}
+.ticketListArea .ticketList .ing .shadow{z-index:1;position:absolute;top:0;left:0;width:100%;height:100%;background:#000;opacity:0.5;filter:alpha(opacity=50);}
+.ticketListArea .ticketList .flag{z-index:2;position:absolute;top:250px;left:20px;width:54px;height:38px;text-align:center;background:#FFF;}
+.ticketListArea .ticketList .flag img{width:48px;margin-top:3px;}
+.ticketListArea .ticketList .price{position:absolute;bottom:20px;right:20px;width:310px;text-align:right;letter-spacing:-0.01em;}
+.ticketListArea .ticketList .price .num{font-family:"NanumBarunGothicBold";}
+.ticketListArea .ticketList .price .before{display:inline;height:16px;line-height:16px;font-size:16px;color:#999;text-decoration:line-through;margin-right:12px;}
+.ticketListArea .ticketList .price .after{display:inline;height:22px;line-height:22px;font-size:22px;color:#111;font-family:"NanumBarunGothic";}
+.ticketListArea .ticketList .price .after em{font-size:16px;color:#ff4f02;font-family:"NanumBarunGothicBold";vertical-align:middle;margin-right:5px;}
+.ticketListArea .ticketList .discount{z-index:2;position:absolute;top:0;left:20px;display:block;width:58px;height:50px;line-height:48px;font-weight:normal;text-align:center;color:#FFF;font-size:18px;letter-spacing:0;background:url('//img.tourtips.com/images/pc/ticket/spr_discount.png') 0 0 no-repeat;}
+.ticketListArea .ticketList .discount i{font-size:26px;font-style:normal;font-family:"NanumBarunGothicBold";}
+.ticketListArea .ticketList .infoWrap{position:absolute;top:300px;left:20px;width:310px;line-height:22px;}
+.ticketListArea .ticketList .infoWrap .title{display:block;font-size:18px;font-weight:normal;color:#111;letter-spacing:-0.01em;margin:0 0 2px;}
+.ticketListArea .ticketList .infoWrap .desk{font-size:14px;color:#777;letter-spacing:-0.01em;}
+.ticketListArea .moreTicket{position:relative;width:1090px;height:60px;padding:0;margin:40px 0 0 0;}
+.ticketListArea .moreTicket span{position:absolute;top:0;left:0;display:block;width:1088px;height:58px;line-height:58px;font-size:18px;color:#111;letter-spacing:-0.010em;background:#f7f7f7;border:1px solid #e3e3e3;}
+
+/* mark */
+.ticketListArea .mark{height:22px;display:inline-block;font:0/0 arial;vertical-align:middle;}
+.ticketListArea .mark strong{float:left;display:inline-block;font-weight:normal;font-family:"NanumBarunGothic";width:50px;height:22px;font:0/0 arial;letter-spacing:0;text-indent:-9999px;vertical-align:middle;margin-left:5px;background:url('//img.tourtips.com/images/pc/ticket/spr_icos.gif') no-repeat;}
+.ticketListArea .mark .new{background-position:-50px 0;}
+.ticketListArea .mark .event{background:url('//img.tourtips.com/images/pc/ticket/mark_event.gif') no-repeat;}
+
+/* floating_banner */
+#floating_banner{z-index:3;position:absolute;top:50px;left:50%;margin-left:390px;}
+#floating_banner .floating_banner_close{position:absolute;top:19px;right:12px;cursor:pointer;}
+
+/* ttnb */
+.ttnb a{font:normal 0/0 arial;}
+
+/* ico_ticket */
+.ico_ticket{display:inline-block;}
+.ico_ticket .ico{display:block;width:48px;height:42px;margin:0 auto 5px auto;background-position:center 0;background-repeat:no-repeat;}
+.ico_ticket .txt{display:block;height:14px;line-height:14px;text-align:center;color:#555;font-size:13px;font-family:"NanumBarunGothicBold";letter-spacing:-0.019em;}
+.ico_ticket.sms .ico{background-image:url('//img.tourtips.com/images/pc/ticket/ico_sms.png?u=2');}
+.ico_ticket.lang .ico{background-image:url('//img.tourtips.com/images/pc/ticket/ico_lang.png?u=2');}
+.ico_ticket.ship .ico{background-image:url('//img.tourtips.com/images/pc/ticket/ico_ship.png');}
+.ico_ticket.email .ico{background-image:url('//img.tourtips.com/images/pc/ticket/ico_email.png?u=2');}
+.ico_ticket.guide .ico{background-image:url('//img.tourtips.com/images/pc/ticket/ico_guide.png?u=2');}
+.ico_ticket.visits .ico{background-image:url('//img.tourtips.com/images/pc/ticket/ico_visits.png?u=2');}
+.ico_ticket.present .ico{background-image:url('//img.tourtips.com/images/pc/ticket/ico_present.png');}
+.ico_ticket.barcode .ico{background-image:url('//img.tourtips.com/images/pc/ticket/ico_barcode.png?u=2');}
+.ico_ticket.eTicket .ico{background-image:url('//img.tourtips.com/images/pc/ticket/ico_eTicket.png?u=2');}
+.ico_ticket.eBaucheo .ico{background-image:url('//img.tourtips.com/images/pc/ticket/ico_eBaucheo.png?u=2');}
+.ico_ticket.mBauchoe .ico{background-image:url('//img.tourtips.com/images/pc/ticket/ico_mBauchoe.png?u=2');}
+.ico_ticket.delivery .ico{background-image:url('//img.tourtips.com/images/pc/ticket/ico_delivery.png?u=2');}
+.ico_ticket.transport .ico{background-image:url('//img.tourtips.com/images/pc/ticket/ico_transport.png?u=2');}
+.ico_ticket.realTicket .ico{background-image:url('//img.tourtips.com/images/pc/ticket/ico_realTicket.png?u=2');}
+.ico_ticket.airportPick .ico{background-image:url('//img.tourtips.com/images/pc/ticket/ico_airportPick.png?u=2');}
+.ico_ticket.exchangeBaucheo .ico{background-image:url('//img.tourtips.com/images/pc/ticket/ico_exchangeBaucheo.png?u=2');}
+
+/* 2018.05~ */
+/* footer */
+#footer{z-index:90;clear:both;position:relative;font-size:12px;color:#aaa;background:#f1f1f1;border-top:1px solid #eee;}
+#footer .in{position:relative;width:1090px;margin:0 auto;}
+#footer .btn_top{z-index:9999;position:fixed;bottom:75px;left:50%;margin-left:558px;display:block;width:50px;height:50px;font:normal 0/0 arial;background:#FFF url('//img.tourtips.com/images/pc/cm/spr_foot.png') 15px 14px no-repeat;border:1px solid #e3e3e3;border-radius:100%;overflow:hidden;}
+#footer .foot_top{height:50px;background:#FFF;}
+#footer .foot_top .tt_sns{float:right;display:inline-block;width:180px;height:50px;text-align:right;vertical-align:middle;}
+#footer .foot_top .tt_sns a{display:inline-block;height:50px;font:normal 0/0 arial;text-indent:-9999em;vertical-align:middle;margin-left:32px;background:url('//img.tourtips.com/images/pc/cm/spr_foot.png') no-repeat;}
+#footer .foot_top .tt_sns a.blog{width:36px;margin-left:22px;background-position:-42px -36px;}
+#footer .foot_top .tt_sns a.facebook{width:20px;background-position:0 -36px;}
+#footer .foot_top .tt_sns a.instagram{width:22px;background-position:-110px -36px;}
+#footer .foot_top .foot_notice{float:left;display:inline-block;width:904px;height:50px;}
+#footer .foot_top .foot_notice a{display:inline-block;height:50px;max-width:100%;vertical-align:middle;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+#footer .foot_top .foot_notice a:after{content:'';display:inline-block;width:0;height:100%;vertical-align:middle;}
+#footer .foot_top .foot_notice a span{display:inline-block;vertical-align:middle;font-size:14px;color:#222;box-sizing:border-box;}
+#footer .foot_top .foot_notice a span.category{height:24px;font-size:12px;color:#ff4f02;line-height:20px;border:2px solid #ff4f02;border-radius:24px;padding:0 12px;margin-right:12px;}
+#footer .foot_top .foot_notice a img{vertical-align:middle;margin-left:5px;}
+#footer .foot_bottom{padding:48px 0 86px 0;}
+#footer .foot_bottom .tt_sites{float:right;vertical-align:middle;margin-top:-8px;}
+#footer .foot_bottom .tt_sites a{position:relative;display:inline-block;line-height:1;color:#969696;font-size:13px;vertical-align:middle;padding:0 12px 0 16px;}
+#footer .foot_bottom .tt_sites a:before{content:'';position:absolute;top:50%;left:0;width:1px;height:10px;margin-top:-5px;background:#d4d4d4;}
+#footer .foot_bottom .tt_sites a:first-child:before{display:none;}
+#footer .foot_bottom .tt_sites .choose_lang{position:relative;display:inline-block;width:108px;height:30px;vertical-align:middle;border:1px solid #ddd;box-sizing:border-box;}
+#footer .foot_bottom .tt_sites .choose_lang a:before{display:none;}
+#footer .foot_bottom .tt_sites .choose_lang span{position:relative;display:block;width:100%;height:100%;font-size:13px;color:#969696;line-height:28px;cursor:pointer;}
+#footer .foot_bottom .tt_sites .choose_lang span:after{content:'';position:absolute;top:50%;right:10px;display:block;width:9px;height:6px;margin-top:-3px;background:url('//img.tourtips.com/images/pc/cm/spr_foot.png') -40px 0 no-repeat;}
+#footer .foot_bottom .tt_sites .choose_lang img{display:inline-block;width:27px;height:auto;vertical-align:middle;margin:0 8px 0 6px;}
+#footer .foot_bottom .tt_sites .choose_lang .choose_lang_layer{display:none;position:absolute;top:28px;left:-1px;width:108px;padding:4px 0;border:1px solid #ddd;box-sizing:border-box;}
+#footer .foot_bottom .tt_sites .choose_lang .choose_lang_layer a{display:block;font-size:13px;color:#969696;padding:6px 0;margin:0;}
+#footer .foot_bottom .tt_sites .choose_lang.on span:after{background-position:-50px 0;}
+#footer .foot_bottom .tt_sites .choose_lang.on .choose_lang_layer{display:block;}
+#footer .foot_bottom .foot_menu{display:inline-block;vertical-align:middle;margin-bottom:20px;}
+#footer .foot_bottom .foot_menu:after{content:'';display:block;clear:both;}
+#footer .foot_bottom .foot_menu a{position:relative;float:left;display:inline-block;font-size:13px;color:#777;line-height:1;vertical-align:middle;padding:0 13px;}
+#footer .foot_bottom .foot_menu a:before{content:'';position:absolute;top:50%;left:0;display:block;width:1px;height:10px;margin-top:-5px;background:#d4d4d4;}
+#footer .foot_bottom .foot_menu a:first-child{padding-left:0;}
+#footer .foot_bottom .foot_menu a:first-child:before{display:none;}
+#footer .foot_bottom .foot_menu a.privacy{color:#555;font-family:"NanumBarunGothicBold";}
+#footer .foot_bottom .foot_menu a.suport_tt{color:#ff4f02;padding:0;margin-left:13px;border-bottom:1px solid #ff4f02;}
+#footer .foot_bottom .foot_menu a.suport_tt:before{display:none;}
+#footer .foot_bottom .foot_info{line-height:20px;font-size:12px;color:#aaa;}
+#footer .foot_bottom .foot_info a{color:#aaa;border-bottom:1px solid #aaa;}
+#footer .foot_bottom .foot_info address{display:inline;font-style:normal;}
+
+/* toast_box */
+.toast_box{z-index:999999;position:fixed;top:50%;left:50%;width:200px;height:56px;text-align:center;line-height:50px;margin:-28px 0 0 50px;outline:none;border-radius:56px;overflow:hidden;}
+.toast_box p{z-index:2;position:relative;display:block;width:100%;height:100%;color:#FFF;font-size:16px;line-height:56px;}
+.toast_box .cover{z-index:1;position:absolute;top:0;left:0;display:block;width:100%;height:100%;background:#000;opacity:0.7;filter:alpha(opacity=70);}
+
+

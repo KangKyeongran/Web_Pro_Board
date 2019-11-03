@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zerock.mapper.MemberMapper">
+
+<insert id="register" parameterType="com.zerock.domain.MemberVO">
+insert into tbl_membership (name,id,pw,fullemail,phone1,phone2,phone3)
+values(#{name},#{id},#{pw},#{fullemail},#{phone1},#{phone2},#{phone3})
+
+
+</insert>
+
+<select id="checkId" resultType="Integer">
+<![CDATA[
+select count(*)
+from tbl_membership
+where id=#{id}
+]]>
+</select>
+
+<update id="createAuthKey">
+update tbl_membership set authCode =#{authCode} where fullemail=#{fullemail}
+</update>
+
+<select id="userAuth" parameterType="com.zerock.domain.MemberVO" resultType="Boolean">
+<![CDATA[
+select emailCheck
+from tbl_membership
+where id=#{id}
+]]>
+</select>
+
+<select id="checkLogin" resultType="Integer">
+<![CDATA[
+select count(*)
+from tbl_membership
+where pw=#{pw} and id=#{id}
+]]>
+</select>
+<select id="getNaming" resultType="String">
+<![CDATA[
+select name
+from tbl_membership
+where id=#{id}
+]]>
+</select>
+
+<select id="getEmailCheck" parameterType="com.zerock.domain.MemberVO" resultType="com.zerock.domain.MemberVO">
+<![CDATA[
+select *
+from tbl_membership
+where fullemail=#{fullemail}
+]]>
+</select>
+
+<update id="updateEmail" parameterType="com.zerock.domain.MemberVO">
+update tbl_membership set emailCheck =#{emailCheck} where fullemail=#{fullemail}
+</update>
+</mapper>
+
